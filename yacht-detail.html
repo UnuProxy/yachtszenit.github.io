@@ -151,13 +151,13 @@
               }
           });
       
-          // AJAX form submission for the enquiry form
+          
           $('#enquiry-form').submit(function(e) {
-              e.preventDefault(); // Prevent default form submission
+              e.preventDefault(); 
       
-              // AJAX request to Formspree or your server-side script
+              // AJAX request to Formspree 
               $.ajax({
-                  url: 'https://formspree.io/f/mgejjqgo', // Update with the correct URL
+                  url: 'https://formspree.io/f/mgejjqgo', 
                   method: 'POST',
                   data: {
                       name: $('#name').val(),
