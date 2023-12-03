@@ -119,31 +119,43 @@
       
     <!--  END YACHT DETAIL  -->
 
+    
+      
+  
+
+      
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
+ <script src="text_images.js"></script>
+      <script src="extras.js"></script>
+ <script src="yachtdetails.js"></script>
+    <script src="yacht.js"></script>
+    <script src="script.js"></script>
     <script>
       $(document).ready(function() {
           // Open the modal
           $('#enquire-now-btn').on('click', function(e) {
-              e.preventDefault();
-              $('#enquire-modal').show();
+              e.preventDefault(); // Prevent default link action
+              $('#enquire-modal').show(); // Display the modal
           });
       
           // Close the modal
           $('.close').on('click', function() {
-              $('#enquire-modal').hide();
+              $('#enquire-modal').hide(); // Hide the modal
           });
       
           // Close the modal if clicked outside the modal content
           $(window).on('click', function(e) {
               if ($(e.target).is('#enquire-modal')) {
-                  $('#enquire-modal').hide();
+                  $('#enquire-modal').hide(); // Hide the modal
               }
           });
       
-          // AJAX form submission
+          // AJAX form submission for the enquiry form
           $('#enquiry-form').submit(function(e) {
-              e.preventDefault();
+              e.preventDefault(); // Prevent default form submission
       
-              // Modify with your actual Formspree URL or server-side script
+              // AJAX request to Formspree or your server-side script
               $.ajax({
                   url: 'https://formspree.io/f/mgejjqgo', // Update with the correct URL
                   method: 'POST',
@@ -155,8 +167,8 @@
                   dataType: 'json',
                   success: function(data) {
                       alert('Thank you for your enquiry!');
-                      $('#enquiry-form').trigger("reset");
-                      $('#enquire-modal').hide(); // Close the modal on success
+                      $('#enquiry-form').trigger("reset"); // Reset the form
+                      $('#enquire-modal').hide(); // Hide the modal on success
                   },
                   error: function(err) {
                       alert('Something went wrong, please try again.');
@@ -165,12 +177,6 @@
           });
       });
       </script>
-      
- <script src="text_images.js"></script>
-      <script src="extras.js"></script>
- <script src="yachtdetails.js"></script>
-    <script src="yacht.js"></script>
-    <script src="script.js"></script>
     <footer>
         <div class="footer-container">
           <div class="footer-logo">    
