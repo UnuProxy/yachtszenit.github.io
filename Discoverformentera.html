@@ -237,24 +237,44 @@
     </div>
   
   <!-- MATCH START AND END DATE WHEN BROWSING -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          var startDateInput = document.getElementById('startDate');
-          var endDateInput = document.getElementById('endDate');
-      
-          startDateInput.addEventListener('change', function() {
-              var startDate = new Date(this.value);
-              var endDate = new Date(startDate);
-              endDate.setDate(startDate.getDate() + 1); // Set end date to one day after start date
-      
-              var month = ('0' + (endDate.getMonth() + 1)).slice(-2); // Ensure month is 2 digits
-              var day = ('0' + endDate.getDate()).slice(-2); // Ensure day is 2 digits
-              var formattedEndDate = endDate.getFullYear() + '-' + month + '-' + day;
-      
-              endDateInput.value = formattedEndDate;
-          });
-      });
-      </script>
+  <script>
+    $(document).ready(function() {
+        // AJAX form submission
+        $('#inquiryForm').submit(function(e) {
+            e.preventDefault();
+    
+            $.ajax({
+                url: $(this).attr('action'),
+                method: 'POST',
+                data: $(this).serialize(),
+                dataType: 'json',
+                success: function(data) {
+                    // Handle success
+                    alert('Thank you for your inquiry!');
+                    $('#inquiryForm').trigger("reset");
+                },
+                error: function(err) {
+                    // Handle error
+                    alert('Something went wrong, please try again.');
+                }
+            });
+        });
+    
+        // Update form with yacht name when inquiry button is clicked
+        $('.inquiry-button').on('click', function() {
+            var yachtName = $(this).data('yacht-name');
+            $('#yachtNameInput').val(yachtName);
+    
+            // Code to show the popup if it's hidden
+            $('#inquiryPopup').show();
+        });
+    
+        // Close popup functionality
+        $('.close-popup').on('click', function() {
+            $('#inquiryPopup').hide();
+        });
+    });
+    </script>
       
 
 
