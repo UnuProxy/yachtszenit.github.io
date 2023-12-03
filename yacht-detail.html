@@ -123,7 +123,7 @@
       $(document).ready(function() {
           // Open the modal
           $('#enquire-now-btn').on('click', function(e) {
-              e.preventDefault(); // Prevent default link action
+              e.preventDefault();
               $('#enquire-modal').show();
           });
       
@@ -132,42 +132,40 @@
               $('#enquire-modal').hide();
           });
       
-          // AJAX submission script goes here
-      });
-      </script>
-<script>
-  $(document).ready(function() {
-      // Previous modal open/close code here
-  
-      // AJAX form submission
-      $('#enquiry-form').submit(function(e) {
-          e.preventDefault();
-  
-          // Modify with your actual Formspree URL or server-side script
-          $.ajax({
-              url: 'https://formspree.io/f/mgejjqgo',
-              method: 'POST',
-              data: {
-                  name: $('#name').val(),
-                  email: $('#email').val(),
-                  message: $('#message').val()
-              },
-              dataType: 'json',
-              success: function(data) {
-                  alert('Thank you for your enquiry!');
-                  $('#enquiry-form').trigger("reset");
-                  $('#enquire-modal').hide(); // Close the modal on success
-              },
-              error: function(err) {
-                  alert('Something went wrong, please try again.');
+          // Close the modal if clicked outside the modal content
+          $(window).on('click', function(e) {
+              if ($(e.target).is('#enquire-modal')) {
+                  $('#enquire-modal').hide();
               }
           });
+      
+          // AJAX form submission
+          $('#enquiry-form').submit(function(e) {
+              e.preventDefault();
+      
+              // Modify with your actual Formspree URL or server-side script
+              $.ajax({
+                  url: 'https://formspree.io/f/mgejjqgo', // Update with the correct URL
+                  method: 'POST',
+                  data: {
+                      name: $('#name').val(),
+                      email: $('#email').val(),
+                      message: $('#message').val()
+                  },
+                  dataType: 'json',
+                  success: function(data) {
+                      alert('Thank you for your enquiry!');
+                      $('#enquiry-form').trigger("reset");
+                      $('#enquire-modal').hide(); // Close the modal on success
+                  },
+                  error: function(err) {
+                      alert('Something went wrong, please try again.');
+                  }
+              });
+          });
       });
-  });
-  </script>
-        
-
-    
+      </script>
+      
  <script src="text_images.js"></script>
       <script src="extras.js"></script>
  <script src="yachtdetails.js"></script>
