@@ -336,36 +336,52 @@ document.addEventListener("DOMContentLoaded", function() {
   fetch('yachts.json')
     .then(response => response.json())
     .then(data => {
-    const yacht = data.find(y => y.id === 1); 
-    if (yacht && yacht.seasonalPrices) {
-      const priceTextPara = document.querySelector('.price-text');
-      let priceTextContent = '<div class="seasonal-price-columns">';
-      let inlineMonthsContent = '<div class="inline-months">';
-
-        Object.entries(yacht.seasonalPrices).forEach(([season, price], index, array) => {
-          const isLastItem = index === array.length - 1;
-          const additionalClass = isLastItem ? '' : 'border-right';
-
-          if (season === 'June' || season === 'September') {
-            inlineMonthsContent += `<div class="seasonal-price-item ${additionalClass}">
-                                      <div class="season-label">${season}</div>
-                                      <div class="season-price">${price}</div>
-                                    </div>`;
-          } else {
-            priceTextContent += `<div class="seasonal-price-item ${additionalClass}">
-                                  <div class="season-label">${season}</div>
-                                  <div class="season-price">${price}</div>
-                                </div>`;
-          }
-        });
-
-        inlineMonthsContent += '</div>';
-        priceTextContent = priceTextContent.replace('<!--inline-months-->', inlineMonthsContent); // Replace the marker
-        priceTextContent += '</div>';
-        priceTextPara.innerHTML = priceTextContent;
+      function displayYachtPrices() {
+        const yachtIdToFetch = getCurrentYachtId(); // Get yacht ID from URL parameter
+        const yacht = data.find(y => y.id === yachtIdToFetch);
+        if (yacht && yacht.seasonalPrices) {
+          updatePriceDisplay(yacht.seasonalPrices);
+        }
       }
+
+      displayYachtPrices(); // Initial call to display prices for the current yacht
     });
+});
+
+function getCurrentYachtId() {
+  // Extract yacht ID from URL query parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  return parseInt(urlParams.get('id')) || 1; // Default to 1 if not found
+}
+
+function updatePriceDisplay(seasonalPrices) {
+  const priceTextPara = document.querySelector('.price-text');
+  let priceTextContent = '<div class="seasonal-price-columns">';
+  let inlineMonthsContent = '<div class="inline-months">';
+
+  Object.entries(seasonalPrices).forEach(([season, price], index, array) => {
+    const isLastItem = index === array.length - 1;
+    const additionalClass = isLastItem ? '' : 'border-right';
+
+    if (season === 'June' || season === 'September') {
+      inlineMonthsContent += `<div class="seasonal-price-item ${additionalClass}">
+                                <div class="season-label">${season}</div>
+                                <div class="season-price">${price}</div>
+                              </div>`;
+    } else {
+      priceTextContent += `<div class="seasonal-price-item ${additionalClass}">
+                            <div class="season-label">${season}</div>
+                            <div class="season-price">${price}</div>
+                          </div>`;
+    }
   });
+
+  inlineMonthsContent += '</div>';
+  priceTextContent = priceTextContent.replace('<!--inline-months-->', inlineMonthsContent);
+  priceTextContent += '</div>';
+  priceTextPara.innerHTML = priceTextContent;
+}
+
 
 
 
