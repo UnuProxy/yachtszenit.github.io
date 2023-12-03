@@ -61,7 +61,7 @@
     "image": "img/Bunker/CRN130Exterior28.jpg",
     "specs": "40m, 12 guests, 7 crew",
     "price": "€130,000 per week",
-    "description": "Built for those who value a majestic experience.Embark on an unforgettable journey aboard the CRN 130 Bunker, a remarkable 40-meter luxury yacht, renowned for its perfect blend of elegance, comfort, and world-class performance. With sleek lines and a sophisticated design, the Bunker offers an unparalleled experience.This magnificent vessel boasts spacious accommodations for up to 12 guests in its beautifully appointed cabins, each designed with the utmost attention to detail and luxury. The master suite, with panoramic views, is a true haven of serenity. Additionally, the Bunker is staffed by an experienced and professional crew of 7, ensuring personalised service and a memorable stay.",
+    "description": "Built for those who value a majestic experience. Embark on an unforgettable journey aboard the CRN 130 Bunker, a remarkable 40-meter luxury yacht, renowned for its perfect blend of elegance, comfort, and world-class performance. With sleek lines and a sophisticated design, the Bunker offers an unparalleled experience.This magnificent vessel boasts spacious accommodations for up to 12 guests in its beautifully appointed cabins, each designed with the utmost attention to detail and luxury. The master suite, with panoramic views, is a true haven of serenity. Additionally, the Bunker is staffed by an experienced and professional crew of 7, ensuring personalised service and a memorable stay.",
     "additionalImages": ["img/additional3.jpg", "img/additional4.jpg"],
     "interiorImages": [ "img/Bunker/CRN130Exterior53.jpg","img/Bunker/CRN130Exterior1.jpg", "img/Bunker/CRN130Exterior2.jpg", "img/Bunker/CRN130Exterior3.jpg", "img/Bunker/CRN130Exterior4.jpg", "img/Bunker/CRN130Exterior5.jpg", "img/Bunker/CRN130Exterior6.jpg", "img/Bunker/CRN130Interior13.jpg", "img/Bunker/CRN130Interior11.jpg", "img/Bunker/CRN130Interior12.jpg", "img/Bunker/CRN130Interior1.jpg", "img/Bunker/CRN130Interior2.jpg", "img/Bunker/CRN130Interior3.jpg", "img/Bunker/CRN130Interior4.jpg", "img/Bunker/CRN130Interior5.jpg", "img/Bunker/CRN130Interior6.jpg", "img/Bunker/CRN130Interior7.jpg", "img/Bunker/CRN130Interior8.jpg", "img/Bunker/CRN130Interior9.jpg", "img/Bunker/CRN130Interior10.jpg"],
     "exteriorImages": [ "img/Bunker/CRN130Exterior53.jpg"],
@@ -86,7 +86,7 @@
   {
     "id": 4,
     "name": "Astondoa 102",
-    "image": "img/Kirios/102AstondoaDron14.jpg",
+    "image": "img/Kirios/102AstondoaDron9.jpg",
     "specs": "31,5m, 12 guests, 4 crew",
     "price": "€10,000 per day",
     "description": "Discover the charm of the Astondoa 102 Kirios, a sophisticated and well-crafted motor yacht from the respected Spanish shipyard Astondoa. Measuring 30.5 meters (approximately 100 feet), this yacht offers a spacious and inviting environment for up to 12 guests in its 5 thoughtfully designed cabins. Kirios is known for its generous living spaces and an array of quality amenities that cater to your comfort and enjoyment. Whether you're basking in the sun, indulging in outdoor dining, or exploring scenic coastlines, your time aboard the Kirios is set to be a relaxed and memorable holiday experience, blending professional service with the tranquility of the sea.",
@@ -114,19 +114,56 @@
   },
   {
     "id": 5,
-    "name": "Mangusta 108",
-    "image": "img/Belisa.jpg",
-    "specs": "30m, 6 guests, 4 crew",
-    "price": "€2,200 per day",
-    "description": "Specially designed for family or small group outings.",
-    "additionalImages": ["img/additional7.jpg", "img/additional8.jpg"],
-    "interiorImages": ["img/interior9.jpg", "img/interior10.jpg"],
-    "exteriorImages": ["img/exterior9.jpg", "img/exterior10.jpg"],
+    "name": "Vanquish 82",
+    "image": "img/SeaStory/VQ82SeaStory87.jpg",
+    "specs": "23,6m, 12 guests, 4 crew",
+    "price": "€8,00 per day",
+    "description": "The Vanquish 82, a marvel of modern yacht design, presents an unparalleled blend of elegance and performance. Crafted for those who seek both luxury and power, it boasts a sleek, contemporary exterior complemented by an exquisitely appointed interior. Onboard, guests are treated to an ambiance of sophistication and comfort, with spacious accommodations and state-of-the-art amenities. Its advanced engineering ensures a smooth, agile voyage, making every journey on the Vanquish 82 an unforgettable adventure. Perfect for both leisurely cruises and spirited ocean escapades, this yacht truly encapsulates the essence of a premium maritime experience.",
+    "interiorImages": ["img/SeaStory/VQ82SeaStory87.jpg", "img/SeaStory/VQ82SeaStory86.jpg", "img/SeaStory/VQ82SeaStory85.jpg", "img/SeaStory/VQ82SeaStory84.jpg", "img/SeaStory/VQ82SeaStory83.jpg", "img/SeaStory/VQ82SeaStory82.jpg", "img/SeaStory/VQ82SeaStoryInterior15.jpg", "img/SeaStory/VQ82SeaStoryInterior12.jpg", "img/SeaStory/VQ82SeaStoryInterior7.jpg", "img/SeaStory/VQ82SeaStoryInterior3.jpg", "img/SeaStory/VQ82SeaStoryInterior2.jpg"],
     "detailedSpecs": {
       "Length": "30m",
       "Guests": "6",
       "Crew": "4",
-      "Speed": "26 knots"
+      "Cruising Area": "Balearics",
+      "Price": "8,000 per day",
+       "CruisingSpeed": "16 knots",
+       "MaxSpeed": "20 knots",
+       "Class": "Motoryacht",
+       "Engine": "2 X VOLVO PENTA IPS1050",
+       "HP": "2,050"
+     },
+     "seasonalPrices": {
+       "May / October": "€8,000 per day",
+       "June / September": "€9,250 per day",
+       "July / August": "€10,500 per day"
+    
+    }
+  },
+  {
+    "id": 6,
+    "name": "Mangusta 92",
+    "image": "img/ChillOut/92Mangusta10.jpg",
+    "specs": "28,3m, 12 guests, 3 crew",
+    "price": "€6,800 per day",
+    "description": "The Mangusta 92 yacht, a splendid masterpiece of nautical engineering, offers an unmatched charter experience, blending exhilarating performance with luxurious comfort. This 28.3m marvel, crafted in Italy, boasts a sleek GRP hull and superstructure, accented with teak decks. Her design is a symphony of style and speed, capable of reaching a breathtaking top speed of 37 knots, while a shallow draft of just 1.2m allows access to secluded shorelines and bays. Inside, the Mangusta 92 exudes elegance and tranquility. The modern, airy interior is bathed in natural light, offering panoramic views of the seascape. Guests are enveloped in an atmosphere of refined comfort, with a choice of two layout options: either three guest cabins with a relaxation room or four guest cabins, each outfitted with high-tech entertainment centers. The yacht comfortably accommodates up to 10 guests, featuring luxurious accommodations including a spacious master cabin with a sauna, a stylish VIP cabin, and additional guest cabins with versatile bedding arrangements.",
+    "interiorImages": ["img/ChillOut/92Mangusta45.jpg","img/ChillOut/92Mangusta31.jpg","img/ChillOut/92Mangusta25.jpg","img/ChillOut/92Mangusta23.jpg","img/ChillOut/92Mangusta21.jpg","img/ChillOut/92Mangusta20.jpg","img/ChillOut/92Mangusta15.jpg","img/ChillOut/92Mangusta14.jpg","img/ChillOut/92Mangusta13.jpg","img/ChillOut/92Mangusta12.jpg"],
+    "detailedSpecs": {
+      "Length": "28,3m",
+      "Guests": "6",
+      "Crew": "4",
+      "Cruising Area": "Balearics",
+      "Price": "8,000 per day",
+       "CruisingSpeed": "16 knots",
+       "MaxSpeed": "20 knots",
+       "Class": "Motoryacht",
+       "Engine": "2 X VOLVO PENTA IPS1050",
+       "HP": "2,050"
+     },
+     "seasonalPrices": {
+       "May / October": "€8,000 per day",
+       "June / September": "€9,250 per day",
+       "July / August": "€10,500 per day"
+    
     }
   }
 ]
