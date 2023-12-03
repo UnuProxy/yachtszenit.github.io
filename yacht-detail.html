@@ -40,8 +40,9 @@
    <!--  <a href="#exterior">Exterior</a> -->
     <a href="#price">Price</a>
     <div id="enquire-now-container">
-      <a href="mailto:contact@yourdomain.com" id="enquire-now-btn">Enquiry Now</a>
-    </div>
+      <a href="#" id="enquire-now-btn">Enquiry Now</a>
+  </div>
+  
   </div>
 
   <div id="enquire-modal" class="modal">
@@ -118,7 +119,53 @@
       
     <!--  END YACHT DETAIL  -->
 
-    
+    <script>
+      $(document).ready(function() {
+          // Open the modal
+          $('#enquire-now-btn').on('click', function(e) {
+              e.preventDefault(); // Prevent default link action
+              $('#enquire-modal').show();
+          });
+      
+          // Close the modal
+          $('.close').on('click', function() {
+              $('#enquire-modal').hide();
+          });
+      
+          // AJAX submission script goes here
+      });
+      </script>
+<script>
+  $(document).ready(function() {
+      // Previous modal open/close code here
+  
+      // AJAX form submission
+      $('#enquiry-form').submit(function(e) {
+          e.preventDefault();
+  
+          // Modify with your actual Formspree URL or server-side script
+          $.ajax({
+              url: 'https://formspree.io/f/mgejjqgo',
+              method: 'POST',
+              data: {
+                  name: $('#name').val(),
+                  email: $('#email').val(),
+                  message: $('#message').val()
+              },
+              dataType: 'json',
+              success: function(data) {
+                  alert('Thank you for your enquiry!');
+                  $('#enquiry-form').trigger("reset");
+                  $('#enquire-modal').hide(); // Close the modal on success
+              },
+              error: function(err) {
+                  alert('Something went wrong, please try again.');
+              }
+          });
+      });
+  });
+  </script>
+        
 
     <script>
 document.addEventListener("DOMContentLoaded", function() {
