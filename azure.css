@@ -3521,12 +3521,12 @@ font-size: 16px;
 }
 
 
-.checkbox-container label {
+/* .checkbox-container label {
   margin: 0; 
   color: #fff;
   display: flex; 
   align-items: center; 
-}
+} */
 
 .checkbox-container label.privacy {
   color: #fff;
