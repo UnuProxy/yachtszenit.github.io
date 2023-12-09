@@ -87,10 +87,117 @@
       <h2 class="animated-h2">
           Charter with Yachts Zenith
       </h2>
-      <a href="Contactus.html" class="cta-button">Plan Your Voyage</a>
+      <button type="button" id="planVoyageBtn" class="cta-button">Plan Your Voyage</button>
   </div>
 
-      
+
+      <!-- Hidden Voyage Planning Form -->
+      <div id="voyageFormPopup" class="voyageFormPopup">
+        <div class="voyageFormPopup-content">
+            <span class="close-button">&times;</span>
+            <form action="https://formspree.io/f/mgejjqgo" method="post" class="voyage-form">
+                <h3>Plan Your Voyage Details</h3>
+    
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="startVoyageDate">Preferred Start Voyage Date:</label>
+                <input type="date" id="startVoyageDate" name="startVoyageDate">
+    
+                <label for="endVoyageDate">Preferred End Voyage Date:</label>
+                <input type="date" id="endVoyageDate" name="endVoyageDate">
+    
+                <label for="numberOfGuests">Number of Guests:</label>
+                <input type="number" id="numberOfGuests" name="numberOfGuests">
+    
+                <label for="additionalRequests">Additional Requests:</label>
+                <textarea id="additionalRequests" name="additionalRequests"></textarea>
+    
+                <div class="privacy-policy-check">
+                    <input type="checkbox" id="agreeVoyage" name="agree" required>
+                    <label for="agreeVoyage">I agree with the <a href="privacy-policy-url">Privacy Policy</a></label>
+                </div>
+    
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+  
+
+  <script>
+function showForm() {
+    var formContainer = document.getElementById('voyageFormPopup');
+    var button = document.getElementById('planVoyageBtn');
+
+    
+    formContainer.style.display = 'block';
+
+    
+    button.style.display = 'none';
+}
+
+
+function hideForm() {
+    var formContainer = document.getElementById('voyageFormPopup');
+    var button = document.getElementById('planVoyageBtn');
+
+   
+    formContainer.style.display = 'none';
+
+    button.style.display = 'block';
+}
+
+document.getElementById('planVoyageBtn').addEventListener('click', showForm);
+
+// Event listener for clicking outside the form
+window.onclick = function(event) {
+    var formContainer = document.getElementById('voyageFormPopup');
+
+    // Check if the click is outside the form
+    if (event.target == formContainer) {
+        hideForm();
+    }
+};
+
+var closeButton = document.querySelector('.close-button');
+if (closeButton) {
+    closeButton.addEventListener('click', hideForm);
+}
+
+
+</script>
+<script>
+    var modal = document.getElementById("voyageFormPopup");
+  
+    var btn = document.getElementById("planVoyageBtn");
+  
+    
+    var span = document.getElementsByClassName("close-button")[0];
+  
+    
+    modal.style.display = "none";
+  
+    
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+  
+    
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+  
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+  </script>
+  
        <!--  <section id="our-team" class="team-section">
           <h2>The Crew Behind our Cruise</h2>
           <div class="team-gallery">
@@ -119,6 +226,7 @@
     
       
     <script>
+      //TITTLE SLIDE IN
         let currentIndex = 0;
 
 function moveSlide(direction) {
