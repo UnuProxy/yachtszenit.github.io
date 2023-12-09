@@ -2499,7 +2499,7 @@ margin-top: 10px;
   margin-top: 20px;
 }
 
-
+/* PLAN YOUR VOYAGE FROM */
 .voyageFormPopup {
   width: 90%;
   max-width: 600px;
@@ -2558,6 +2558,18 @@ margin-top: 10px;
   cursor: pointer;
   color: white;
 }
+
+.privacy-policy-check {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 0;
+}
+
+.privacy-policy-check input[type="checkbox"] {
+  margin-right: 0;
+}
+
 
 
 @media screen and (max-width: 428px) {
