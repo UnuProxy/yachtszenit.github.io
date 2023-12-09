@@ -119,7 +119,8 @@
                 <div class="privacy-policy-check">
                     <input type="checkbox" id="agreeVoyage" name="agree" required>
                     <label for="agreeVoyage">I agree with the <a href="privacy-policy-url">Privacy Policy</a></label>
-                </div>
+                  </div>
+                  
     
                 <button type="submit" class="submit-button">Submit</button>
             </form>
@@ -197,6 +198,35 @@ if (closeButton) {
         }
     }
   </script>
+  <script>
+    document.getElementById('voyageForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      var form = this;
+      var formData = new FormData(form);
+  
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+      }).then(response => {
+        if (response.ok) {
+          
+          document.getElementById('successMessage').style.display = 'block';
+  
+          
+          form.reset();
+  
+         
+        } else {
+          
+          alert("There was an error submitting the form. Please try again.");
+        }
+      }).catch(error => {
+        
+        alert("There was a network error. Please try again.");
+      });
+    });
+  </script>
+  
   
        <!--  <section id="our-team" class="team-section">
           <h2>The Crew Behind our Cruise</h2>
