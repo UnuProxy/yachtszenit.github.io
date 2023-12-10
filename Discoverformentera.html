@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Embark on an unforgettable journey to Formentera with Yachts Zenith. Experience the luxury and beauty of Formentera by yacht.">
+    <meta name="keywords" content="Formentera, Luxury Yacht, Yacht Charter, Mediterranean Yachting, Yachts Zenith">
+    <link rel="canonical" href="https://www.yachtszenith.com/discoverformentera">
+    <meta property="og:title" content="Discover Formentera by Yacht - Yachts Zenith">
+    <meta property="og:description" content="Join Yachts Zenith in exploring the serene beauty of Formentera. Luxury yacht charters for a unique Mediterranean experience.">
+    <meta property="og:image" content="img/Formenterabeach.jpg">
+    <meta property="og:url" content="https://www.yachtszenith.com/discoverformentera">
+    <meta property="og:type" content="website">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-iBBXm2juqDlc+JLzH5BdptF+toPhxj6ESlF5Qf1PtF4xj1S3+it2B6jOdZufP/+" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="azure.css">
+
     <title>Discover Formentera by Yacht - Yachts Zenith</title>
-  
-  </head>
+</head>
+
   <body>
     <div class="page-container">
         <div class="content-wrap">
@@ -33,9 +42,6 @@
   </nav>
   </div>
 
-<!-- BACKGROUND FIRST IMAGE -->
-  <!-- <div class="full-width-image">
-</div> -->
 
  <section>
   <div class="video-container">
@@ -49,7 +55,6 @@
 </section>
 <div class="center-wrapper">
     <div class="content-box">
-    <!-- <h1></h1> -->
     <p>Formentera, a gem in the Mediterranean, stands as one of Europe's most pristine and untouched islands. It’s a paradise that seems almost too good to be true. A favored destination for our charter clients is Illetes, the closest point of Formentera to Ibiza, known for its serene beauty and crystal-clear waters.</p>
     <p>But Illetes is just the beginning. To truly immerse yourself in the Formentera experience, we at Zenith Yachts encourage you to explore beyond. Set sail to other enchanting beaches on the island, such as Cala Saona, Es Calo, and Es Migjorn, each offering its own unique charm and tranquility.</p>
     </div>
@@ -110,28 +115,6 @@
     </div>
 </div>
 
-
-<!-- <div class="contact-us-button">
-    <i class="fas fa-comment"></i>
-</div> -->
-
-<!-- <div id="slideInPanel" class="slide-in-panel">
-    <h2>Tailor Your Experience</h2>
-    <p>We're here to create your dream yacht holiday. Send us a message:</p> -->
-    
-   <!--  <form id="contactForm" action="/submit" method="post">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-    
-    <button id="closeButton">Close</button>
-</div> -->
-
-
-
-  
   <section class="spacer">
     <div class="centered-paragraph">
       <p class="custom-text">
@@ -227,19 +210,12 @@
 </div>
   
   
-   
-    
-  
-  
-  
     <div class="see-all-container">
       <a href="Yachtcharter.html" class="see-all-link"> View all Yachts for Charter </a>
     </div>
-  
-  <!-- MATCH START AND END DATE WHEN BROWSING -->
+
   <script>
     $(document).ready(function() {
-        // AJAX form submission
         $('#inquiryForm').submit(function(e) {
             e.preventDefault();
     
@@ -249,27 +225,26 @@
                 data: $(this).serialize(),
                 dataType: 'json',
                 success: function(data) {
-                    // Handle success
+                  
                     alert('Thank you for your inquiry!');
                     $('#inquiryForm').trigger("reset");
                 },
                 error: function(err) {
-                    // Handle error
+                  
                     alert('Something went wrong, please try again.');
                 }
             });
         });
     
-        // Update form with yacht name when inquiry button is clicked
         $('.inquiry-button').on('click', function() {
             var yachtName = $(this).data('yacht-name');
             $('#yachtNameInput').val(yachtName);
     
-            // Code to show the popup if it's hidden
+           
             $('#inquiryPopup').show();
         });
     
-        // Close popup functionality
+       
         $('.close-popup').on('click', function() {
             $('#inquiryPopup').hide();
         });
@@ -311,7 +286,7 @@
       <div class="socials">
       <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
       <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.instagram.com/yachtszenith/"><i class="fab fa-instagram"></i></a>
     </div>
   </div>
     

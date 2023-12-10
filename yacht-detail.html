@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the world of luxury yachting. Discover the finest yachts for charter. Experience the pinnacle of maritime luxury.">
+    <meta name="keywords" content="yachts, luxury yachting, yacht charter, maritime luxury">
+    <meta property="og:title" content="Luxury Yachting - Charter">
+    <meta property="og:description" content="Immerse yourself in the luxury yachting experience. Browse our exclusive collection of yachts for charter">
+    <meta property="og:image" content="/Users/Julian/Desktop/yachtszenit.github.io/img/LogoFooterBlue.png"> 
+    <meta property="og:url" content="http://www.yachtszenith.com">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="azure.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-
-    <title>Yachting</title>
+ 
+    <title>Yachting - Luxury Yachts for Charter</title>
 </head>
 <body>
      <!--  HEADER  -->
@@ -37,7 +44,6 @@
     <a href="#about" id="aboutLink">About</a>
     <a href="#key-info">Specifications</a>
     <a href="#interior">Images</a>
-   <!--  <a href="#exterior">Exterior</a> -->
     <a href="#price">Price</a>
     <div id="enquire-now-container">
       <a href="#" id="enquire-now-btn">Enquiry Now</a>
@@ -117,13 +123,6 @@
         <button class="carousel-btn" id="next-btn" onclick="move(1)">❯</button>
       </div>
       
-    <!--  END YACHT DETAIL  -->
-
-    
-      
-  
-
-      
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    
  <script src="text_images.js"></script>
@@ -133,21 +132,21 @@
     <script src="script.js"></script>
     <script>
       $(document).ready(function() {
-          // Open the modal
+    
           $('#enquire-now-btn').on('click', function(e) {
-              e.preventDefault(); // Prevent default link action
-              $('#enquire-modal').show(); // Display the modal
+              e.preventDefault(); 
+              $('#enquire-modal').show(); 
           });
       
-          // Close the modal
+          
           $('.close').on('click', function() {
-              $('#enquire-modal').hide(); // Hide the modal
+              $('#enquire-modal').hide(); 
           });
       
-          // Close the modal if clicked outside the modal content
+        
           $(window).on('click', function(e) {
               if ($(e.target).is('#enquire-modal')) {
-                  $('#enquire-modal').hide(); // Hide the modal
+                  $('#enquire-modal').hide(); 
               }
           });
       
@@ -155,7 +154,7 @@
           $('#enquiry-form').submit(function(e) {
               e.preventDefault(); 
       
-              // AJAX request to Formspree 
+              
               $.ajax({
                   url: 'https://formspree.io/f/mgejjqgo', 
                   method: 'POST',
@@ -167,8 +166,8 @@
                   dataType: 'json',
                   success: function(data) {
                       alert('Thank you for your enquiry!');
-                      $('#enquiry-form').trigger("reset"); // Reset the form
-                      $('#enquire-modal').hide(); // Hide the modal on success
+                      $('#enquiry-form').trigger("reset"); 
+                      $('#enquire-modal').hide(); 
                   },
                   error: function(err) {
                       alert('Something went wrong, please try again.');
@@ -202,7 +201,7 @@
             <div class="socials">
             <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
             <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/yachtszenith/"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
           
