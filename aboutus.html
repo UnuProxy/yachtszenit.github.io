@@ -3,14 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover Yachts Zenith, your premier choice for luxury yacht chartering in Ibiza. Learn about our story and commitment to unparalleled sailing experiences.">
+    <meta name="keywords" content="Luxury Yacht Charter, Ibiza, Sailing, Yacht Experiences, Yachts Zenith, About Yachts">
+    <meta name="author" content="Yachts Zenith">
+
+    
+    <meta property="og:title" content="About Yachts Zenith - Leading Luxury Yacht Charter in Ibiza">
+    <meta property="og:description" content="Step into the world of Yachts Zenith and explore our journey in offering the finest yacht charter experiences in Ibiza.">
+    <meta property="og:image" content="/Users/Julian/Desktop/yachtszenit.github.io/img/LogoFooterBlue.png">
+    <meta property="og:url" content="aboutus.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Yachts Zenith - Ibiza's Premier Luxury Yacht Charter">
+    <meta name="twitter:description" content="Discover the story of Yachts Zenith, leaders in luxury yacht chartering in Ibiza, and our passion for creating unforgettable sea adventures.">
+
+    <!-- Favicons -->
+    <link rel="icon" href="img/LogoFooterBlue.png " type="image/x-icon">
+
+    <!-- External Scripts and Stylesheets -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="azure.css">
-    <title>About us - Yachts Zenith</title>
+    <title>About Us - Yachts Zenith</title>
 </head>
+
 <body>
 
     <!--  HEADER  -->
@@ -64,17 +87,14 @@
                 <div class="gallery-item">
                     <img src="img/Belisa.jpg" alt="Mangusta 108">
                     <h3>Mangusta 108</h3>
-                    <!-- <p>The Mangusta 108 is a luxury motor yacht known for its blend of speed and elegance. Measuring 108 feet in length, this yacht offers spacious accommodations with a stylish interior and state-of-the-art amenities. It's powered by advanced engines allowing for high-speed cruising, while ensuring a comfortable ride. Key features include lavish lounging areas, outdoor decks for entertainment, and a range of water toys. The Mangusta 108 is ideal for those seeking a fast, luxurious yachting experience.</p> -->
                 </div>
                 <div class="gallery-item">
                     <img src="img/Bunker.jpg" alt="CRN 130">
                     <h3>CRN 130</h3>
-                    <!-- <p>The Mangusta 108 is a luxury motor yacht known for its blend of speed and elegance. Measuring 108 feet in length, this yacht offers spacious accommodations with a stylish interior and state-of-the-art amenities. It's powered by advanced engines allowing for high-speed cruising, while ensuring a comfortable ride. Key features include lavish lounging areas, outdoor decks for entertainment, and a range of water toys. The Mangusta 108 is ideal for those seeking a fast, luxurious yachting experience.</p> -->
                 </div>
                 <div class="gallery-item">
                     <img src="img/Persing90.jpg" alt="Persing 90">
                     <h3>Persing 90</h3>
-                    <!-- <p>The Mangusta 108 is a luxury motor yacht known for its blend of speed and elegance. Measuring 108 feet in length, this yacht offers spacious accommodations with a stylish interior and state-of-the-art amenities. It's powered by advanced engines allowing for high-speed cruising, while ensuring a comfortable ride. Key features include lavish lounging areas, outdoor decks for entertainment, and a range of water toys. The Mangusta 108 is ideal for those seeking a fast, luxurious yachting experience.</p> -->
                 </div>
                
             </div>
@@ -91,7 +111,7 @@
   </div>
 
 
-      <!-- Hidden Voyage Planning Form -->
+     
       <div id="voyageFormPopup" class="voyageFormPopup">
         <div class="voyageFormPopup-content">
             <span class="close-button">&times;</span>
@@ -153,11 +173,10 @@ function hideForm() {
 
 document.getElementById('planVoyageBtn').addEventListener('click', showForm);
 
-// Event listener for clicking outside the form
 window.onclick = function(event) {
     var formContainer = document.getElementById('voyageFormPopup');
 
-    // Check if the click is outside the form
+    
     if (event.target == formContainer) {
         hideForm();
     }
@@ -167,36 +186,23 @@ var closeButton = document.querySelector('.close-button');
 if (closeButton) {
     closeButton.addEventListener('click', hideForm);
 }
-/* MATCHING DATES UPON SELECTION */
+
 document.getElementById('startVoyageDate').addEventListener('change', function() {
   var startDate = new Date(this.value);
   var endDateInput = document.getElementById('endVoyageDate');
 
   endDateInput.valueAsDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() + 1);
 });
-
-
-
-
 </script>
 <script>
     var modal = document.getElementById("voyageFormPopup");
-  
     var btn = document.getElementById("planVoyageBtn");
-  
-    
     var span = document.getElementsByClassName("close-button")[0];
-  
-    
     modal.style.display = "none";
-  
-    
     btn.onclick = function() {
         modal.style.display = "block";
     }
-  
-    
-    span.onclick = function() {
+    pan.onclick = function() {
         modal.style.display = "none";
     }
   
@@ -234,37 +240,9 @@ document.getElementById('startVoyageDate').addEventListener('change', function()
       });
     });
   </script>
-  
-  
-       <!--  <section id="our-team" class="team-section">
-          <h2>The Crew Behind our Cruise</h2>
-          <div class="team-gallery">
-           
-          </div>
-        </section> -->
-      
-       <!--  <section id="safety-service" class="safety-section">
-          <h2>Your Safety and Satisfaction: Our Highest Priority</h2>
-          <p>[Information about safety and service...]</p>
-        </section> -->
-      
-      <!--   <section id="global-reach" class="global-section">
-          <h2>Your Passport to the World's Waters</h2>
-          <p>[Your global reach and available destinations...]</p>
-        </section> -->
-      
-       <!--  <section id="testimonials" class="testimonials-section">
-          <h2>Hear from Our Esteemed Guests</h2>
-          <div class="testimonials-gallery">
-           
-          </div>
-        </section> -->
-      
-      
-    
+
       
     <script>
-      //TITTLE SLIDE IN
         let currentIndex = 0;
 
 function moveSlide(direction) {
@@ -319,20 +297,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 });
-
-
-
-
-    </script>
+  </script>
         
-        
-      
-      
-      
-      
-      
-
-      <script src="script.js"></script>   
+   <script src="script.js"></script>   
     <footer>
         <div class="footer-container">
           <div class="footer-logo">    
@@ -358,7 +325,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             <div class="socials">
             <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
             <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/yachtszenith/"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
           

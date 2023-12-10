@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience the majestic beauty of Es Vedra with Yachts Zenith. Discover unique yacht journey to one of Ibiza's most enchanting destinations.">
+    <meta name="keywords" content="Es Vedra Yacht, Ibiza Yachts, Yachts Zenith, Luxury Yachting, Ibiza Landmarks">
+    <link rel="canonical" href="https://www.yachtszenith.com/esvedra">
+    <meta property="og:title" content="Es Vedra - Ibiza Yachts Zenith">
+    <meta property="og:description" content="Embark on a luxurious yacht journey to Es Vedra with Yachts Zenith. Explore one of Ibiza's most iconic and mystical destinations.">
+    <meta property="og:image" content="/Users/Julian/Desktop/yachtszenit.github.io/img/EsVedra.jpg">
+    <meta property="og:url" content="https://www.yachtszenith.com/esvedra">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="azure.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-iBBXm2juqDlc+JLzH5BdptF+toPhxj6ESlF5Qf1PtF4xj1S3+it2B6jOdZufP/+" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Es Vedra - Ibiza Yachts Zenith </title>
+
+    <title>Es Vedra - Ibiza Yachts Zenith</title>
 </head>
+
 <body>
     <div class="black-bg" id="sticky-section">
         <nav class="position-header ">
@@ -41,7 +51,6 @@
       </section>
       <div class="center-wrapper">
         <div class="content-box">
-        <!-- <h1></h1> -->
         <p>Step aboard in a luxurious Yachts Zenith and set sail towards the enigmatic islet of Es Vedra, Ibiza's iconic landmark. As the sun takes its bow below the horizon, the heavens come alive in a riot of orange, pink, and purple, casting an enchanting glow upon the waters. Enjoy a glass of champagne and let the tranquil atmosphere envelop you. This isn't merely a sunset; it's an indelible experience that epitomises the very essence of Ibiza's charm. With Yachts Zenith, you're not simply observing the sunset—you're part and parcel of the spectacle.</p>
         </div>
     </div>
@@ -141,7 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
     threshold: 0.5 
   });
 
-  // Observe the charter section
   document.querySelectorAll('.charter-section').forEach(section => {
     observer.observe(section);
   });
@@ -149,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 <script>
   $(document).ready(function() {
-      // AJAX form submission
+     
       $('#inquiryForm').submit(function(e) {
           e.preventDefault();
   
@@ -159,27 +167,23 @@ document.addEventListener('DOMContentLoaded', () => {
               data: $(this).serialize(),
               dataType: 'json',
               success: function(data) {
-                  // Handle success
+                 
                   alert('Thank you for your inquiry!');
                   $('#inquiryForm').trigger("reset");
               },
               error: function(err) {
-                  // Handle error
+                 
                   alert('Something went wrong, please try again.');
               }
           });
       });
   
-      // Update form with yacht name when inquiry button is clicked
+      
       $('.inquiry-button').on('click', function() {
           var yachtName = $(this).data('yacht-name');
           $('#yachtNameInput').val(yachtName);
-  
-          // Code to show the popup if it's hidden
           $('#inquiryPopup').show();
       });
-  
-      // Close popup functionality
       $('.close-popup').on('click', function() {
           $('#inquiryPopup').hide();
       });
@@ -212,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="socials">
         <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
         <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/yachtszenith/"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
       
