@@ -33,14 +33,14 @@
 
     <main>
       <section id="our-story" class="narrative-section">
-        <h2 class="animated-h2">
+        <h2  class="animated-h2">
           Our Voyage
       </h2>
-          <p>In London's vibrant heart, by the historic Thames, Yachts Zenith began a quest to redefine luxury yachting. Julian Pirvu, driven by a deep-seated passion for the sea, founded more than just a charter service; he created a gateway to make the elegance of yachting accessible for everyone. Starting humbly, Julian established a service founded on excellence and discretion, selecting a fleet of elegant, high-performance yachts not merely for their aesthetic appeal, but for the extraordinary experiences they could provide.
+          <p>Yachts Zenith, birthed in London's dynamic core by the Thames, embarked on a mission to transform luxury yachting. Julian Pirvu, fuelled by his profound sea love, launched more than a charter service; he created a portal to the splendour of yachting for all. With a focus on excellence and discretion, Julian handpicked a fleet of elegant, high-performance yachts, chosen as much for their beauty as for the remarkable experiences they could offer.
 
-            Every voyage with Yachts Zenith, whether a cosy gathering or a lavish celebration, is uniquely tailored to its guests. The company's philosophy was straightforward: yachting should be an exhilarating, accessible adventure. This vision challenged the traditional exclusivity of yachting, welcoming both seasoned and first-time enthusiasts.
+            Each Zenith voyage, whether a quaint gathering or a grand festivity, is tailored to its guests, embodying a philosophy that yachting is an exciting, inclusive journey. 
             
-            As Yachts Zenith's reputation for exemplary service and privacy grew, it attracted a global clientele, drawn to its bespoke experiences and commitment to discretion. Today, with bases in London and Ibiza, Yachts Zenith stands as a paragon of maritime distinction. True to its origins, the company continues to offer unforgettable journeys, earn its guests' trust, and pioneer new frontiers in luxurious, discreet sea travel.</p>
+            Gaining renown for outstanding service and privacy, Yachts Zenith drew a worldwide clientele, attracted to its tailored experiences and unwavering discretion.</p>
       </section>
 
       <section id="our-mission" class="purpose-section">
@@ -49,7 +49,7 @@
       </h2>
           <div class="mission-content">
               <p>Our mission is to offer unrivalled yacht charter experiences that seamlessly combine luxury, adventure, and relaxation.</p>
-              <img src="img/Belisa.jpg" alt="Yacht in a beautiful location" class="mission-image">
+              <img src="img/Bunker130.jpg" alt="Yacht in a beautiful location" class="mission-image">
           </div>
       </section>
 
@@ -96,9 +96,9 @@
         <div class="voyageFormPopup-content">
             <span class="close-button">&times;</span>
             <form action="https://formspree.io/f/mgejjqgo" method="post" class="voyage-form">
-                <h3>Plan Your Voyage Details</h3>
+               
     
-                <label for="name">Name:</label>
+                <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>
     
                 <label for="email">Email:</label>
@@ -117,12 +117,11 @@
                 <textarea id="additionalRequests" name="additionalRequests"></textarea>
     
                 <div class="privacy-policy-check">
-                    <input type="checkbox" id="agreeVoyage" name="agree" required>
-                    <label for="agreeVoyage">I agree with the <a href="privacy-policy-url">Privacy Policy</a></label>
-                  </div>
-                  
-    
-                <button type="submit" class="submit-button">Submit</button>
+                  <input type="checkbox" id="agreeVoyage" name="agree" required>
+                  <label for="agreeVoyage"></label>
+                  <a href="privacy-policy-url" class="privacy-policy-link">I agree with the Privacy Policy</a>
+              </div>
+                <button type="submit" class="submit-button">Submit</button>   
             </form>
         </div>
     </div>
@@ -168,6 +167,15 @@ var closeButton = document.querySelector('.close-button');
 if (closeButton) {
     closeButton.addEventListener('click', hideForm);
 }
+/* MATCHING DATES UPON SELECTION */
+document.getElementById('startVoyageDate').addEventListener('change', function() {
+  var startDate = new Date(this.value);
+  var endDateInput = document.getElementById('endVoyageDate');
+
+  endDateInput.valueAsDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() + 1);
+});
+
+
 
 
 </script>
