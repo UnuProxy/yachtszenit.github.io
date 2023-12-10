@@ -428,7 +428,7 @@
   
 <script>
   $(document).ready(function() {
-      // AJAX form submission
+      
       $('#inquiryForm').submit(function(e) {
           e.preventDefault();
   
@@ -449,7 +449,7 @@
           });
       });
   
-      // Update form with yacht name when inquiry button is clicked
+      
       $('.inquiry-button').on('click', function() {
           var yachtName = $(this).data('yacht-name');
           $('#yachtNameInput').val(yachtName);
@@ -458,7 +458,7 @@
           $('#inquiryPopup').show();
       });
   
-      // Close popup functionality
+      
       $('.close-popup').on('click', function() {
           $('#inquiryPopup').hide();
       });

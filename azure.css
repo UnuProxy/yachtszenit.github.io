@@ -714,6 +714,10 @@ nav .mainMenu .closeMenu,
 .yacht-image img {
   transform: translateZ(-1px) scale(1.2);
 }
+
+.inquiry-button{
+  color: white;
+}
 @media (max-width: 768px) {
   .yacht-slide-in {
     transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.5s ease;
@@ -903,7 +907,6 @@ ul li {
 }
 
 button {
- /*  background-color: var(--LOGO-COLOR); */
   background: linear-gradient(to right, #9E7D5A, #B89769, #D9C2A1);
   border: none;
   margin-top: 10px;
@@ -1856,12 +1859,12 @@ button:hover {
 
 
 #extras-section h2 {
-  text-align: center;  /* Center-align the text */
+  text-align: center;  
   color: var(--TEXT-LIGHTCOLOR);
   font-size: 36px;
   margin-top: 200px;
-  margin-left: auto;  /* Center the block */
-  margin-right: auto;  /* Center the block */
+  margin-left: auto; 
+  margin-right: auto; 
   position: relative;
   display: inline-block;
   padding: 10px;
@@ -1926,7 +1929,7 @@ button:hover {
 }
 
 
-/* Making sure the child elements inherit the background */
+
 #extras-section #extras-list, #extras-section #extras-list li {
   background-color: inherit;
 }
@@ -1943,10 +1946,12 @@ button:hover {
     margin: 0 10px 0 0;  
     padding: 10px;
     list-style: none;
+    margin-bottom: 30px;
   }
 
   #extras-section h2 {
-    margin-top: 50px;
+    margin-top: 80px;
+    margin-bottom: 80px;
   }
 }
 
@@ -2545,10 +2550,12 @@ margin-top: 10px;
 .voyageFormPopup-content h3 {
   margin-bottom: 10px;
 }
-
-.voyage-form button:hover {
-  background-color: #0056b3;
+.privacy-policy-check {
+  display: flex;
+  align-items: center; 
+  gap: 8px; 
 }
+
 
 .close-button {
   position: absolute;
@@ -2561,13 +2568,21 @@ margin-top: 10px;
 
 .privacy-policy-check {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 10px 0;
+  align-items: center; 
+  gap: 8px; 
 }
 
 .privacy-policy-check input[type="checkbox"] {
-  margin-right: 0;
+  margin-right: 10;
+}
+.privacy-policy-check input[type="checkbox"],
+.privacy-policy-check label {
+  
+  vertical-align: middle; 
+}
+.privacy-policy-check label {
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -2584,14 +2599,29 @@ margin-top: 10px;
 
   .voyage-form input, .voyage-form textarea, .voyage-form select {
     padding: 8px; 
+    color: #000;
   }
 
   .voyage-form button {
     padding: 10px; 
     width: 100%; 
   }
+  
 }
 
+
+.privacy-policy-check input[type="checkbox"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.privacy-policy-check label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+}
 
 
 .outline-button {
@@ -3129,20 +3159,20 @@ margin-top: 10px;
   background-color: transparent;
 }
 
-/* Gallery container */
+
 .gallery-container {
   position: relative;
   width: 100%;
   overflow: hidden; 
 }
 
-/* Gallery slider */
+
 .gallery-slider {
   display: flex;
   transition: transform 0.5s ease;
 }
 
-/* Gallery items */
+
 .gallery-item {
   flex: 0 0 100%; 
   text-align: center;
@@ -3150,7 +3180,7 @@ margin-top: 10px;
  
 }
 
-/* Gallery images */
+
 .gallery-item img {
   max-width: 100%; 
   height: auto; 
@@ -3162,7 +3192,6 @@ margin-top: 10px;
   padding: 40px;
   max-width: 1000px; 
   margin: auto; 
-  overflow: hidden; 
 }
 
 .gallery-item img, .gallery-item h3 {
@@ -3173,7 +3202,7 @@ margin-top: 10px;
 .narrative-section h2 {
   font-size: 2.5em; 
   margin-bottom: 30px; 
-margin-top: 50px;
+  margin-top: 150px;
 }
 
 .narrative-section p {
@@ -3196,14 +3225,14 @@ margin-top: 50px;
   margin-top: 40px;
 }
 
-/* Initial state of h2 elements */
+
 .animated-h2 {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* State when h2 elements are animated */
+
 .animated-h2.animate {
   opacity: 1;
   transform: translateY(0);
@@ -3215,37 +3244,40 @@ margin-top: 50px;
   margin-bottom: 20px;
 }
 
-/* Create a pseudo-element for the underline */
+
 .animated-h2::after {
   content: '';
   position: absolute;
-  bottom: -5px; /* Adjust as needed */
+  bottom: -5px; 
   left: 0;
-  width: 0; /* Initially no underline */
-  height: 2px; /* Thickness of the underline */
-  background: var(--LOGO-COLOR); /* Color of the underline */
+  width: 0;
+  height: 2px; 
+  background: var(--LOGO-COLOR); 
   transition: width 0.5s ease;
 }
 
-/* State when h2 elements are animated */
+
 .animated-h2.animate::after {
-  width: 100%; /* Full underline */
+  width: 100%; 
 }
 
 
 @media (max-width: 768px) {
   .narrative-section {
-      padding: 20px;
+    padding: 20px;
   }
 
   .narrative-section h2 {
-      font-size: 2em;
+    font-size: 2em; 
   }
 
   .narrative-section p {
-      font-size: 1.1em;
-      
-      text-align: justify;
+    font-size: 1.1em; 
+    line-height: 1.6; 
+    margin: 0 15px;
+    padding: 10px 0; 
+    opacity: 1; 
+    transform: translateY(0);
   }
 }
 
@@ -3543,6 +3575,8 @@ font-size: 16px;
   background-color: transparent;
 }
 
+
+
 .contact-message{
   background-color: transparent;
 }
@@ -3592,7 +3626,6 @@ font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;  
-  color: #000;
 }
 
 .contact-form-element button:hover {
@@ -3615,12 +3648,6 @@ font-size: 16px;
 }
 
 
-/* .checkbox-container label {
-  margin: 0; 
-  color: #fff;
-  display: flex; 
-  align-items: center; 
-} */
 
 .checkbox-container label.privacy {
   color: #fff;
@@ -3964,11 +3991,6 @@ section {
   background-color: transparent;
 }
 
-/* .smaller-video {
-  max-height: 70vh;  
-  width: auto;
-} */
-
 .carousel button {
  font-weight: lighter;
 }
@@ -4058,32 +4080,32 @@ section {
 }
 
 .carousel-slide h2 {
-  font-size: 36px; /* Desktop size */
+  font-size: 36px; 
 }
 
 .carousel-slide button {
-  font-size: 20px; /* Desktop size */
-  margin-top: 15px; /* Space between title and button */
+  font-size: 20px; 
+  margin-top: 15px; 
 }
 
 /* Tablet adjustments */
 @media (max-width: 768px) {
   .carousel-slide h2 {
-    font-size: 28px; /* Tablet size */
+    font-size: 28px; 
   }
   .carousel-slide button {
-    font-size: 18px; /* Tablet size */
+    font-size: 18px; 
   }
 }
 
-/* Mobile adjustments (particularly for iPhone) */
+
 @media (max-width: 480px) {
   .carousel-slide h2 {
-    font-size: 24px; /* Mobile size */
-    margin-bottom: 10px; /* Adjust spacing between h2 and button */
+    font-size: 24px; 
+    margin-bottom: 10px; 
   }
   .carousel-slide button {
-    font-size: 10px; /* Mobile size */
+    font-size: 10px; 
     margin-bottom: 150px;
   }
   .carousel-controls .control-btn[data-dir="prev"],
