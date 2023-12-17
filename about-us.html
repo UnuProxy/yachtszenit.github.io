@@ -136,11 +136,16 @@
                 <label for="additionalRequests">Additional Requests:</label>
                 <textarea id="additionalRequests" name="additionalRequests"></textarea>
     
-                <div class="privacy-policy-check">
-                  <input type="checkbox" id="agreeVoyage" name="agree" required>
-                  <label for="agreeVoyage"></label>
-                  <a href="privacy-policy-url" class="privacy-policy-link">I agree with the Privacy Policy</a>
+                <div class="voyage-privacy-check">
+                  <div class="voyage-checkbox-container">
+                      <input type="checkbox" id="voyageAgree" name="voyageAgree" required>
+                      <label for="voyageAgree"></label>
+                  </div>
+                  <div class="voyage-link-container">
+                      <a href="privacy-policy-url" class="voyage-privacy-link">I agree with the Privacy Policy</a>
+                  </div>
               </div>
+              
                 <button type="submit" class="submit-button">Submit</button>   
             </form>
         </div>

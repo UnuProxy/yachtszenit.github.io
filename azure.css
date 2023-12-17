@@ -2540,11 +2540,11 @@ margin-top: 10px;
   color: white;
 }
 
- .privacy-policy-check {
+/* .privacy-policy-check {
   display: flex;
   align-items: center; 
   gap: 8px; 
-} 
+} */
 
 .privacy-policy-check input[type="checkbox"] {
   margin-right: 10;
@@ -2581,6 +2581,30 @@ margin-top: 10px;
     width: 100%; 
   }
   
+}
+.voyage-privacy-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Adjust as needed */
+}
+
+
+
+.voyage-privacy-link {
+  color: red;
+  text-decoration: none;
+}
+
+.voyage-privacy-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 600px) {
+  .voyage-privacy-check {
+      flex-direction: column;
+  }
 }
 
 
