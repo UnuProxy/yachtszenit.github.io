@@ -22,7 +22,11 @@
     },
     {
       "id": 6,
-      "extras": ["Wi-Fi", "Retractable awning at the bow and stern", "Tender Jet", "Sauna", "Snorkel Equipment", "Air Conditioning","Seakeeper  gyroscopic stabilizers", "Water skis for both adults and children" , "2 x Stand up paddle board" ]
+      "extras": ["Wi-Fi", "Retractable awning at the bow and stern", "Tender Jet", "Sauna", "Snorkel Equipment", "Air Conditioning","Seakeeper gyroscopic stabilizers", "Water skis for both adults and children" , "2 x Stand up paddle board" ]
+    },
+    {
+      "id": 7,
+      "extras": ["Wi-Fi", "Tender Jet", "Air Conditioning","Seakeeper gyroscopic stabilizers", "Water skis for both adults and children" , "2 x Stand up paddle board" ]
     }
   ]
   
