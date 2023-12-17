@@ -2486,30 +2486,47 @@ margin-top: 10px;
   gap: 8px; 
 }
  */
- .voyage-privacy-policy-check {
-  display: flex;
-  align-items: center;
-  gap: 8px; /* Adjust the gap to bring the checkbox and link closer */
+.privacy-policy-check {
+  display: grid;
+  grid-template-columns: auto auto; 
+  align-items: center; 
+  gap: 10px; 
 }
 
-.voyage-privacy-policy-check input[type="checkbox"] {
-  margin: 0;
+.checkbox-label {
+  grid-column: 1; 
+  grid-row: 1; 
 }
 
-.voyage-privacy-policy-link {
-  color: #0066cc;
-  text-decoration: none;
+#agreeVoyage {
+  grid-column: 1; 
+  grid-row: 1; 
 }
 
-.voyage-privacy-policy-link:hover {
-  text-decoration: underline;
+.privacy-policy-link {
+  grid-column: 2;
+  grid-row: 1; 
 }
 
-/* Responsive Design for smaller screens */
 @media screen and (max-width: 600px) {
-  .voyage-privacy-policy-check {
-      flex-direction: column;
-      align-items: flex-start;
+  .privacy-policy-check {
+      grid-template-columns: 1fr; 
+      grid-template-areas:
+          "checkbox"
+          "link";
+  }
+
+  #agreeVoyage {
+      grid-area: checkbox;
+  }
+
+  .checkbox-label {
+      grid-area: checkbox;
+  }
+
+  .privacy-policy-link {
+      grid-area: link;
+      text-align: center; /* Center-align the link if desired */
   }
 }
 
@@ -2522,12 +2539,12 @@ margin-top: 10px;
   cursor: pointer;
   color: white;
 }
-/* 
+
  .privacy-policy-check {
   display: flex;
   align-items: center; 
   gap: 8px; 
-}  */
+} 
 
 .privacy-policy-check input[type="checkbox"] {
   margin-right: 10;
