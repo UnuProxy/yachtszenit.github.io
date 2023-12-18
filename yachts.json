@@ -170,53 +170,52 @@
     "id": 7,
     "name": "Pershing 72",
     "image": "img/Legendary/72Pershing1.jpg",
-    "specs": "28,3m, 12 guests, 3 crew?",
+    "specs": "21m, 12 guests, 2 crew",
     "price": "€6,500 per day",
-    "description": "Text missing",
+    "description": "The Pershing 72 yacht, a symbol of luxury and performance, offers an exclusive charter experience in the beautiful waters of Ibiza. This 22.26-meter vessel boasts a striking design with a silver and black color scheme, and it's equipped with powerful twin MTU engines that enable a top speed of 45 knots. It comfortably accommodates up to 6 guests in 3 elegantly appointed cabins, including a spacious master suite. The yacht features a large sunbathing area, a well-equipped cockpit for dining and socialising, and a hydraulic swim platform for easy water access. With its combination of speed, style, and comfort, the Pershing 72 is perfect for guests seeking a thrilling yet luxurious boating adventure in Ibiza.",
     "interiorImages": ["img/Legendary/72Pershing6.jpg","img/Legendary/72Pershing9.jpg","img/Legendary/72Pershing4.jpg","img/Legendary/72Pershing11.jpg","img/Legendary/72Pershing7.jpg","img/Legendary/72Pershing2.jpg"],
     "detailedSpecs": {
       "Length": "21m",
       "Guests": "12",
-      "Crew": "2",
+      "Crew": "3",
       "Cruising Area": "Balearics",
       "Price": "6,500 per day",
-       "Cruising Speed": "16 knots?",
-       "Max Speed": "20 knots?",
+       "Cruising Speed": "38 knots",
+       "Max Speed": "45 knots",
        "Class": "Motoryacht",
-       "Engine": "2 X VOLVO PENTA IPS1050?",
-       "HP": "2,050?"
+       "Engine": "2 X MTU",
+       "HP": "3,646"
      },
      "seasonalPrices": {
        "May / October": "€6,500 per day",
        "June / September": "€7,500 per day",
        "July / August": "€9,000 per day"
-    
     }
   },
   {
     "id": 8,
     "name": "Waterdream 65",
     "image": "img/SirHotel/65Waterdream29.jpg",
-    "specs": "28,3m, 12 guests, 3 crew",
+    "specs": "19m, 12 guests, 2 crew",
     "price": "€6,500 per day",
-    "description": "Text missing",
+    "description": "The Waterdream 65 California exemplifies sophistication and style, making it an ideal choice for a chic and relaxed day charter. Its design boasts a loungy layout complemented by a stylish centre console, creating an ultra-cool ambiance perfect for family gatherings or fun-filled days with friends. With the capacity to accommodate up to 12 guests for day charters, it promises an unforgettable experience on the water. Additionally, the charter includes two Seabobs, enhancing the allure and offering added value for an exhilarating day at sea. This yacht merges luxury with leisure, ensuring every outing is both exclusive and enjoyable.",
     "interiorImages": ["img/SirHotel/65Waterdream28.jpg","img/SirHotel/65Waterdream27.jpg","img/SirHotel/65Waterdream26.jpg","img/SirHotel/65Waterdream25.jpg", "img/SirHotel/65Waterdream7.jpg"],
     "detailedSpecs": {
-      "Length": "21m",
+      "Length": "19m",
       "Guests": "12",
       "Crew": "2",
-      "Cruising Area": "Balearics",
+      "Cruising Area": "Ibiza - Formentera",
       "Price": "6,500 per day",
-       "Cruising Speed": "16 knots?",
-       "Max Speed": "20 knots?",
-       "Class": "Motoryacht",
-       "Engine": "2 X VOLVO PENTA IPS1050?",
-       "HP": "2,050?"
+      "Cruising Speed": "16 knots",
+      "Max Speed": "38 knots",
+      "Class": "Motoryacht",
+      "Engine": "2 x VOLVO IPS 1.350",
+      "HP": "2,000"
      },
      "seasonalPrices": {
-       "May / October": "€6,500 per day",
-       "June / September": "€7,500 per day",
-       "July / August": "€9,000 per day"
+       "May / October": "€4,000 per day",
+       "June / September": "€4,550 per day / €4,400 per day",
+       "July / August": "€4,900 per day / €5,300 per day"
     
     }
   }
