@@ -2592,7 +2592,7 @@ margin-top: 10px;
 
 
 .voyage-privacy-link {
-  color: red;
+  color: var(--LOGO-COLOR);
   text-decoration: none;
 }
 
