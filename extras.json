@@ -26,7 +26,11 @@
     },
     {
       "id": 7,
-      "extras": ["Wi-Fi", "Tender Jet", "Air Conditioning","Seakeeper gyroscopic stabilizers", "Water skis for both adults and children" , "2 x Stand up paddle board" ]
+      "extras": ["Wi-Fi", "Tender Jet" ,"1 x SeaBob", "2 x Stand up paddle board", "Music System", "Aft sliding roof in cockpit" ]
+    },
+    {
+      "id": 8,
+      "extras": ["Wi-Fi", "2 x SeaBob", "Air Conditioning" , "Snorkeling equipment" , "Stand up paddle board", "Music equipment" ]
     }
   ]
   
