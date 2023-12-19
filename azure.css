@@ -2586,7 +2586,15 @@ margin-top: 10px;
 }
 
 .policyAgreement {
+  flex-shrink: 0;
   margin-right: 10px;
+}
+
+.consent-label {
+  font-size: 16px;
+  color: #333; 
+  line-height: 1.4; 
+  max-width: 90%; 
 }
 .consent-label a  {
   background-color: transparent;
@@ -2595,6 +2603,22 @@ margin-top: 10px;
 .consent-label {
   font-size: 16px; 
   color: var(--TEXT-LIGHTCOLOR); 
+}
+
+@media (max-width: 600px) {
+  .consent-checkbox {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  #policyAgreement {
+      margin-bottom: 10px; 
+  }
+
+  .consent-label {
+      font-size: 14px; 
+      max-width: 100%; 
+  }
 }
 
 .policy-link {
