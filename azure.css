@@ -2682,6 +2682,58 @@ margin-top: 10px;
 }
 
 
+/* DATA POLICY
+ */
+ .privacy-policy-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #0B3355; /* Dark navy blue background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #ffffff; /* White text */
+  font-family: 'Arial', sans-serif;
+}
+
+.privacy-policy-section h2 {
+  color: #ffffff; /* White for main headings */
+  font-size: 2em;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.privacy-policy-section h3 {
+  color: #EFEFEF;
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.privacy-policy-section p {
+  font-size: 1em;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .privacy-policy-section {
+      padding: 20px;
+      max-width: 90%;
+  }
+
+  .privacy-policy-section h2 {
+      font-size: 1.8em;
+  }
+
+  .privacy-policy-section h3 {
+      font-size: 1.4em;
+  }
+}
+
+
+
 /* IBIZA POPULAR DESTINATION*/
 .destination-container {
   overflow: hidden;
