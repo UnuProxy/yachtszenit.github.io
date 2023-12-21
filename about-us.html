@@ -59,11 +59,10 @@
         <h2  class="animated-h2">
           Our Voyage
       </h2>
-          <p>Yachts Zenith, birthed in London's dynamic core by the Thames, embarked on a mission to transform luxury yachting. Julian Pirvu, fuelled by his profound sea love, launched more than a charter service; he created a portal to the splendour of yachting for all. With a focus on excellence and discretion, Julian handpicked a fleet of elegant, high-performance yachts, chosen as much for their beauty as for the remarkable experiences they could offer.
+      <p>Welcome to Yachts Zenith, a beacon of luxury yachting, originated in the vibrant heart of London, alongside the historic Thames. Founded by Julian Pirvu, a man deeply passionate about the sea, Yachts Zenith represents more than a charter service – it's a gateway to the majestic world of yachting accessible to all. Driven by a commitment to excellence and discretion, Julian has meticulously curated a fleet of elegant, high-performance yachts. These vessels are not just chosen for their aesthetic appeal but for the unparalleled experiences they offer.</p>
 
-            Each Zenith voyage, whether a quaint gathering or a grand festivity, is tailored to its guests, embodying a philosophy that yachting is an exciting, inclusive journey. 
-            
-            Gaining renown for outstanding service and privacy, Yachts Zenith drew a worldwide clientele, attracted to its tailored experiences and unwavering discretion.</p>
+      <p>At Yachts Zenith, every journey is custom-crafted. Whether it's an intimate gathering or a lavish celebration, each voyage is a testament to our philosophy: yachting is not just a pastime, it's an inclusive adventure. Renowned for our exceptional service and a deep respect for privacy, Yachts Zenith has attracted a discerning international clientele. They are drawn to our bespoke experiences and our dedication to maintaining the utmost discretion.</p>
+      
       </section>
 
       <section id="our-mission" class="purpose-section">
@@ -142,7 +141,7 @@
                       <label for="voyageAgree"></label>
                   </div>
                   <div class="voyage-link-container">
-                      <a href="privacy-policy-url" class="voyage-privacy-link">I agree with the Privacy Policy</a>
+                    <a href="#" id="privacyPolicyLink" class="voyage-privacy-link">I agree with the Privacy Policy</a>
                   </div>
               </div>
               
@@ -151,28 +150,59 @@
         </div>
     </div>
     
+    <div id="privacyPolicyModal" class="privacy-policy-modal">
+      <div class="privacy-policy-modal-content">
+          <span class="privacy-policy-close-button">&times;</span>
+          <h2>Data Collection and Management</h2>
+<h3>Responsible Entity</h3>
+<p>Data on this website is managed and processed by Yachts Zenith. For our contact information and our responsibilities regarding data processing, please see the “Contact for Data Protection” section of this policy.</p>
+
+<h3>Methods of Data Collection</h3>
+<p>We gather data directly from you, for instance, when you complete our contact form, and automatically via our IT systems, which record details like your browser type, operating system, and the timings of your visits.</p>
+
+<h3>Purposes of Data Collection</h3>
+<p>Our data collection serves two principal aims: to ensure our website functions seamlessly and to analyse user interaction to enhance your experience.</p>
+<a href="data-policy.html">Read more</a>
+      </div>
+  </div>
   
+  
+  <script>
+  //GET MODAL  
+  var privacyPolicyModal = document.getElementById("privacyPolicyModal");
+
+  var privacyPolicyLink = document.getElementById("privacyPolicyLink");
+
+  var closeButton = document.querySelector(".privacy-policy-close-button");
+
+  privacyPolicyLink.onclick = function(event) {
+      event.preventDefault(); 
+      privacyPolicyModal.style.display = "block";
+  };
+  closeButton.onclick = function() {
+      privacyPolicyModal.style.display = "none";
+  };
+  window.onclick = function(event) {
+      if (event.target == privacyPolicyModal) {
+          privacyPolicyModal.style.display = "none";
+      }
+  };
+  </script>
 
   <script>
 function showForm() {
     var formContainer = document.getElementById('voyageFormPopup');
     var button = document.getElementById('planVoyageBtn');
 
-    
     formContainer.style.display = 'block';
-
-    
     button.style.display = 'none';
 }
-
 
 function hideForm() {
     var formContainer = document.getElementById('voyageFormPopup');
     var button = document.getElementById('planVoyageBtn');
 
-   
-    formContainer.style.display = 'none';
-
+    formContainer.style.display = 'none'
     button.style.display = 'block';
 }
 
@@ -313,16 +343,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
           
           <div class="policy-links">
             <h4>Data Policies</h4>
-            <div><a href="#cookies-policy">Cookies Policy</a></div>
-            <div><a href="#data-policy">Data Policy</a></div>
-            <div><a href="#data-protection">Data Protection</a></div>
+            <div><a href="cookies-policy">Cookies Policy</a></div>
+            <div><a href="data-policy">Data Policy</a></div>
+            <div><a href="data-protection">Data Protection</a></div>
             <div><a href="#sitemap">Sitemap</a></div>
           </div>
           
           <div class="company">
             <h4>Company</h4>
-            <div><a href="Contact-us">Contact Us</a></div>
             <div><a href="about-us">About Us</a></div>
+            <div><a href="Contact-us">Contact Us</a></div>
           </div>
           
           <div class="social-media">
