@@ -913,37 +913,6 @@ button:hover {
     background-position: left center; 
 }
 
-@media screen and (max-width: 768px) {
-  .yacht-listings {
-    padding: 0 10px; 
-  }
-
-  .yacht {
-    flex-basis: 100%; 
-    margin: 10px 0; 
-  }
-
-  .yacht-image {
-    height: auto; 
-  }
-  
-}
-
-
-
-.yacht-image {
-  margin-bottom: 10px;
-  height: 250px;
-  overflow: hidden;
-}
-
-.yacht-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-
 /* YACHT CHARTER BROWSER */
 .filter-bar {
   margin: 10px;
@@ -2338,10 +2307,6 @@ form button {
 
 
 /* POPUP STYLES */
-:root {
-  --BG-COLOUR: #0B3355; /* Define the background color variable */
-}
-
 .popup {
   display: none;
   position: fixed;
@@ -2350,7 +2315,7 @@ form button {
   width: 100%;
   height: 100%;
   z-index: 999;
-
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
 }
 
 .popup-content {
@@ -2361,7 +2326,15 @@ form button {
   width: 80%; /* Responsive width */
   max-width: 400px; /* Maximum width */
   padding: 20px;
+  border-radius: 8px;
+  background-color: #0B3355; /* Navy blue background */
+  color: white; /* White text */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Adding depth with shadow */
+}
 
+.popup-content h2 {
+  text-align: center; /* Centered title */
+  margin-bottom: 20px; /* Space below the title */
 }
 
 .close-popup {
@@ -2369,7 +2342,66 @@ form button {
   top: 10px;
   right: 10px;
   cursor: pointer;
+  color: white; /* White close button */
+  font-size: 24px; /* Larger close icon */
+}
 
+/* Style for form elements */
+.popup-content label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="number"],
+.popup-content input[type="email"],
+.popup-content input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  font-size: 14px;
+}
+
+/* Style for the submit button */
+.popup-content button {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  padding-left: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+  background-color: #f2f2f2; /* Light grey on hover */
+}
+
+/* Additional styles for improved aesthetics */
+.popup-content input:focus {
+  border-color: #f2f2f2; 
+  outline: none;
+}
+
+
+
+ @media screen and (max-width: 1024px) {
+  .yacht {
+    flex-basis: 100%;  
+    margin: 10px 0;  
+  }
+  .yacht-listings {
+    padding: 0 10px; 
+  }
+} 
 
 
 
@@ -2598,27 +2630,10 @@ margin-top: 10px;
   
 }
 .consent-checkbox {
-  text-align: left; 
-  display: block; 
-  margin: 0; 
-  padding: 0; 
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; 
   background-color: transparent;
-}
-
-
-.consent-checkbox input[type="checkbox"] {
-  margin-right: 10px; 
-  vertical-align: middle; 
-}
-
-.consent-label {
-  vertical-align: middle; 
-}
-
-
-.policy-link {
-  
-  text-decoration: none; 
 }
 
 .policyAgreement {
@@ -2792,56 +2807,6 @@ margin-top: 10px;
   }
 }
 
-/* THE PRIVACY POLICY MODAL  */
-.privacy-policy-modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0, 0, 0, 0.4); 
-  z-index: 1000;
-}
-
-
-.privacy-policy-modal-content {
-  margin: 15% auto; 
-  padding: 20px;
-  border: 1px solid #888;
-  width: 60%; 
-  border-radius: 5px; 
-  color: #ccc;
-}
-
-.privacy-policy-close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  color: white; 
-  background-color: transparent;
-}
-
-.privacy-policy-close-button:hover,
-.privacy-policy-close-button:focus {
-  color: var(--LOGO-COLOR); 
-  text-decoration: none;
-  cursor: pointer;
-}
-@media (max-width: 600px) {
-  .privacy-policy-modal-content {
-      width: 95%; 
-      margin: 10% auto; 
-      max-height: 80vh; 
-      overflow-y: auto; 
-  }
-}
-
 
 
 /* IBIZA POPULAR DESTINATION*/
@@ -2905,10 +2870,12 @@ margin-top: 10px;
   justify-content: space-around; /* Adjusts image positioning */
   gap: 10px; /* Adds space between images */
   padding: 0 10px;
+  height: auto; 
+}
 
 .image-block {
   width: calc(33.333% - 10px);
-  margin-bottom: 10px;
+  height: auto;
   overflow: hidden;
 }
 
