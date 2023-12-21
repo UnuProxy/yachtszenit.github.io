@@ -393,7 +393,6 @@
                   // Handle success
                   alert('Thank you for your inquiry!');
                   $('#inquiryForm').trigger("reset");
-                  $('#inquiryPopup').hide(); // Hide the popup after successful submission
               },
               error: function(err) {
                   // Handle error
@@ -407,7 +406,7 @@
           var yachtName = $(this).data('yacht-name');
           $('#yachtNameInput').val(yachtName);
   
-          // Code to show the popup
+          // Code to show the popup if it's hidden
           $('#inquiryPopup').show();
       });
   
@@ -416,7 +415,6 @@
           $('#inquiryPopup').hide();
       });
   });
-  
   </script>
   
   
@@ -435,16 +433,16 @@
       
       <div class="policy-links">
         <h4>Data Policies</h4>
-        <div><a href="cookies-policy">Cookies Policy</a></div>
-        <div><a href="data-policy">Data Policy</a></div>
-        <div><a href="data-protection">Data Protection</a></div>
+        <div><a href="#cookies-policy">Cookies Policy</a></div>
+        <div><a href="#data-policy">Data Policy</a></div>
+        <div><a href="#data-protection">Data Protection</a></div>
         <div><a href="#sitemap">Sitemap</a></div>
       </div>
       
       <div class="company">
         <h4>Company</h4>
-        <div><a href="about-us">About Us</a></div>
         <div><a href="Contact-us">Contact Us</a></div>
+        <div><a href="about-us">About Us</a></div>
       </div>
 
       <div>
