@@ -8,6 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <link rel="icon" type="image/png" href="img/LogoFooterBlue.png">
     <link rel="stylesheet" href="azure.css">
     <title>Yachts, Superyachts Charter in Ibiza - Yachts Zenith</title>
@@ -236,10 +238,6 @@
       <input type="date" id="startDate" name="startDate" required>
       <label for="endDate">End Date:</label>
       <input type="date" id="endDate" name="endDate" required>
-     <!--  <div class="flex-container">
-        <input type="checkbox" id="flexibleDates" name="flexibleDates">
-        <label for="flexibleDates">I am flexible</label>
-      </div> -->
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
       <button type="submit">Submit</button>
@@ -396,7 +394,6 @@
                   // Handle success
                   alert('Thank you for your inquiry!');
                   $('#inquiryForm').trigger("reset");
-                  $('#inquiryPopup').hide(); // Hide the popup after successful submission
               },
               error: function(err) {
                   // Handle error
@@ -410,7 +407,7 @@
           var yachtName = $(this).data('yacht-name');
           $('#yachtNameInput').val(yachtName);
   
-          // Code to show the popup
+          // Code to show the popup if it's hidden
           $('#inquiryPopup').show();
       });
   
@@ -419,7 +416,6 @@
           $('#inquiryPopup').hide();
       });
   });
-  
   </script>
   
   
@@ -438,16 +434,16 @@
       
       <div class="policy-links">
         <h4>Data Policies</h4>
-        <div><a href="cookies-policy">Cookies Policy</a></div>
-        <div><a href="data-policy">Data Policy</a></div>
-        <div><a href="data-protection">Data Protection</a></div>
+        <div><a href="#cookies-policy">Cookies Policy</a></div>
+        <div><a href="#data-policy">Data Policy</a></div>
+        <div><a href="#data-protection">Data Protection</a></div>
         <div><a href="#sitemap">Sitemap</a></div>
       </div>
       
       <div class="company">
         <h4>Company</h4>
-        <div><a href="about-us">About Us</a></div>
         <div><a href="Contact-us">Contact Us</a></div>
+        <div><a href="about-us">About Us</a></div>
       </div>
 
       <div>

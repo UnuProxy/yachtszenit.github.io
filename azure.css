@@ -830,6 +830,7 @@ color: var(--LOGO-COLOR);
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 80px;
+  background: linear-gradient(to bottom, #0B3355, #1A4B75);
 }
 
 .yacht {
@@ -845,7 +846,7 @@ color: var(--LOGO-COLOR);
 .yacht-image {
   margin-bottom: 10px;
   height: 250px; 
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .yacht-image img {
@@ -853,6 +854,18 @@ color: var(--LOGO-COLOR);
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
+}
+.yacht-details {
+  background: transparent;
+}
+.yacht-details ul{
+  background: transparent;
+}
+.yacht-details li{
+  background: transparent;
+}
+.yacht-details h2{
+  background: transparent;
 }
 
 .yacht-image:hover img {
@@ -898,37 +911,6 @@ button {
 
 button:hover {
     background-position: left center; 
-}
-
-@media screen and (max-width: 768px) {
-  .yacht-listings {
-    padding: 0 10px; 
-  }
-
-  .yacht {
-    flex-basis: 100%; 
-    margin: 10px 0; 
-  }
-
-  .yacht-image {
-    height: auto; 
-  }
-  
-}
-
-
-
-.yacht-image {
-  margin-bottom: 10px;
-  height: 250px;
-  overflow: hidden;
-}
-
-.yacht-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
 }
 
 /* YACHT CHARTER BROWSER */
@@ -2325,10 +2307,6 @@ form button {
 
 
 /* POPUP STYLES */
-:root {
-  --BG-COLOUR: #0B3355; /* Define the background color variable */
-}
-
 .popup {
   display: none;
   position: fixed;
@@ -2337,8 +2315,7 @@ form button {
   width: 100%;
   height: 100%;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  color: white;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
 }
 
 .popup-content {
@@ -2346,34 +2323,18 @@ form button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
+  width: 80%; /* Responsive width */
+  max-width: 400px; /* Maximum width */
   padding: 20px;
-  background-color: var(--BG-COLOUR); /* Dark blue background */
   border-radius: 8px;
-  color: white; /* Ensuring text color is white */
+  background-color: #0B3355; /* Navy blue background */
+  color: white; /* White text */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Adding depth with shadow */
 }
 
-/* Style for the form input fields and textarea */
-.popup-content input[type="text"],
-.popup-content input[type="email"],
-.popup-content input[type="number"],
-.popup-content input[type="date"],
-.popup-content textarea {
-  display: block; /* Make them block elements */
-  width: 100%; /* Full width */
-  padding: 10px; /* Padding */
-  margin-bottom: 10px; /* Space between elements */
-  background-color: #0B3355; /* Dark blue background */
-  color: white; /* White text */
-  border: 1px solid white; /* White border */
-  box-sizing: border-box;
-}
-
-/* Separate style for labels */
-.popup-content label {
-  color: white; /* White text */
-  margin-bottom: 5px; /* Spacing below the label */
-  display: block; /* Ensure labels are block level */
+.popup-content h2 {
+  text-align: center; /* Centered title */
+  margin-bottom: 20px; /* Space below the title */
 }
 
 .close-popup {
@@ -2381,21 +2342,68 @@ form button {
   top: 10px;
   right: 10px;
   cursor: pointer;
-  color: white;
+  color: white; /* White close button */
+  font-size: 24px; /* Larger close icon */
+}
+
+/* Style for form elements */
+.popup-content label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="number"],
+.popup-content input[type="email"],
+.popup-content input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #fff;
+  border-radius: 5px;
   background-color: transparent;
+  color: white;
+  font-size: 14px;
 }
 
-/* Center-align the title */
-.popup-content h2 {
-  text-align: center;
-  margin-bottom: 20px; /* Space below the title */
+/* Style for the submit button */
+.popup-content button {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  padding-left: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-@media screen and (max-width: 1024px) {
-  .popup-content {
-      width: 90%; /* Adjust width on smaller screens */
+.popup-content button:hover {
+  background-color: #f2f2f2; /* Light grey on hover */
+}
+
+/* Additional styles for improved aesthetics */
+.popup-content input:focus {
+  border-color: #f2f2f2; 
+  outline: none;
+}
+
+
+
+ @media screen and (max-width: 1024px) {
+  .yacht {
+    flex-basis: 100%;  
+    margin: 10px 0;  
   }
-}
+  .yacht-listings {
+    padding: 0 10px; 
+  }
+} 
+
+
 
 
 
@@ -2503,8 +2511,8 @@ margin-top: 10px;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
-  color: black; 
-  background-color: white; 
+  color: var(--TEXT-LIGHTCOLOR); 
+ 
 }
 
 .voyage-form button {
@@ -2622,31 +2630,22 @@ margin-top: 10px;
   
 }
 .consent-checkbox {
-  text-align: left; 
-  display: block; 
-  margin: 0; 
-  padding: 0; 
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; 
   background-color: transparent;
 }
 
-
-.consent-checkbox input[type="checkbox"] {
-  margin-right: 10px; 
-  vertical-align: middle; 
+.policyAgreement {
+  flex-shrink: 0;
+  margin-right: 10px;
 }
 
 .consent-label {
-  vertical-align: middle; 
-}
-
-
-.policy-link {
-  
-  text-decoration: none; 
-}
-
-.policyAgreement {
-  margin-right: 10px;
+  font-size: 16px;
+  color: #333; 
+  line-height: 1.4; 
+  max-width: 90%; 
 }
 .consent-label a  {
   background-color: transparent;
@@ -2655,6 +2654,22 @@ margin-top: 10px;
 .consent-label {
   font-size: 16px; 
   color: var(--TEXT-LIGHTCOLOR); 
+}
+
+@media (max-width: 600px) {
+  .consent-checkbox {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  #policyAgreement {
+      margin-bottom: 10px; 
+  }
+
+  .consent-label {
+      font-size: 14px; 
+      max-width: 100%; 
+  }
 }
 
 .policy-link {
@@ -2792,56 +2807,6 @@ margin-top: 10px;
   }
 }
 
-/* THE PRIVACY POLICY MODAL  */
-.privacy-policy-modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0, 0, 0, 0.4); 
-  z-index: 1000;
-}
-
-
-.privacy-policy-modal-content {
-  margin: 15% auto; 
-  padding: 20px;
-  border: 1px solid #888;
-  width: 60%; 
-  border-radius: 5px; 
-  color: #ccc;
-}
-
-.privacy-policy-close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  color: white; 
-  background-color: transparent;
-}
-
-.privacy-policy-close-button:hover,
-.privacy-policy-close-button:focus {
-  color: var(--LOGO-COLOR); 
-  text-decoration: none;
-  cursor: pointer;
-}
-@media (max-width: 600px) {
-  .privacy-policy-modal-content {
-      width: 95%; 
-      margin: 10% auto; 
-      max-height: 80vh; 
-      overflow-y: auto; 
-  }
-}
-
 
 
 /* IBIZA POPULAR DESTINATION*/
@@ -2902,11 +2867,10 @@ margin-top: 10px;
 .image-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around; /* Adjusts image positioning */
+  gap: 10px; /* Adds space between images */
   padding: 0 10px;
-  overflow: hidden;
-  height: calc(100vh - 200px); 
-}
+
 
 .image-block {
   width: calc(33.333% - 10px);
@@ -3030,7 +2994,7 @@ margin-top: 10px;
   align-items: center;
   justify-content: center;
   z-index: 1;
-  background: linear-gradient(to bottom, #0B3355, #1A4B75);
+  background: linear-gradient(to top, #0B3355, #1A4B75);
 }
 
 
@@ -3358,7 +3322,6 @@ button.next {
   color: #fff;
   font-size: 20px;
 }
-
 
 
 .half {
