@@ -245,27 +245,6 @@ nav .mainMenu .closeMenu,
     background-color: transparent;
   }
 
-
-  
- /*  .social-icons {
-    position: absolute;
-    bottom: 10px;
-    left: 20px;
-    z-index: 2;
-  }
-
-
-  
-  .social-icons a {
-    color: #fff;
-    font-size: 24px;
-    margin-right: 10px;
-  }
-
-  .social-icons a:last-child {
-    margin-right: 0;
-  } */
-
   .card-titles {
     text-align: center;
     color: #fff;
@@ -313,13 +292,13 @@ nav .mainMenu .closeMenu,
 
 @media screen and (max-width: 768px) {
   .video-container video {
-    width: 100%; /* Full width on small screens */
+    width: 100%;
   }
 
   .carousel .carousel-slide h2,
   .carousel .carousel-slide a button {
-    font-size: 16px; /* Smaller font size for mobile */
-    padding: 10px; /* Adjust padding */
+    font-size: 16px; 
+    padding: 10px; 
   }
 
   .carousel-controls .control-btn {
@@ -448,7 +427,7 @@ nav .mainMenu .closeMenu,
   
   .subtitle-left:not(:hover)::before, .subtitle-right:not(:hover)::before {
     width: 0%;
-    transition: width 0s; /* Instantly disappears when not hovering */
+    transition: width 0s; 
   }
   
   .subtitle-left:hover, .subtitle-right:hover {
@@ -468,15 +447,13 @@ nav .mainMenu .closeMenu,
   }
   
   .h1-iphone {
-    animation: slideUp 1s ease-out forwards; /* No delay, so this starts immediately */
+    animation: slideUp 1s ease-out forwards; 
   }
   
   .subtitles {
     animation: slideUp 1s ease-out forwards 0.5s; }
   
 
-
-/* MEDIA SCREENS FOR TITLE AND SUBTITLE */
 
 @media screen and (max-width: 480px) { 
   
@@ -611,7 +588,7 @@ nav .mainMenu .closeMenu,
       margin: 0 4px;  
     }
     
-    /* Additional style to center the whole slider on the page */
+   
     .image-slider-container {
       display: flex;
       justify-content: center;
@@ -659,7 +636,7 @@ nav .mainMenu .closeMenu,
   
     
     @media (max-width: 768px) {
-      .image-slider-container { /* Added the missing dot */
+      .image-slider-container { 
         min-height: 200px;  
       }
       
@@ -703,16 +680,19 @@ nav .mainMenu .closeMenu,
   opacity: 1;
 }
 
-/* Additional CSS for the  effect */
+
 .yacht-image img {
   transform-origin: 50% 50%;
   will-change: transform;
   backface-visibility: hidden;
 }
 
-/* Assuming the scroll speed should be 0.7, adjust as you see fit */
 .yacht-image img {
   transform: translateZ(-1px) scale(1.2);
+}
+
+.inquiry-button{
+  color: white;
 }
 @media (max-width: 768px) {
   .yacht-slide-in {
@@ -832,7 +812,6 @@ color: var(--LOGO-COLOR);
   transition: transform 0.3s ease;
 }
 
-/* HOVER EFFECT FOR SEE MORE LINK */
 .see-all-container a.see-all-link:hover::after {
   transform: translateX(5px) translateY(-50%) rotate(90deg);
 }
@@ -851,6 +830,7 @@ color: var(--LOGO-COLOR);
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 80px;
+  background: linear-gradient(to bottom, #0B3355, #1A4B75);
 }
 
 .yacht {
@@ -866,7 +846,7 @@ color: var(--LOGO-COLOR);
 .yacht-image {
   margin-bottom: 10px;
   height: 250px; 
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .yacht-image img {
@@ -874,6 +854,18 @@ color: var(--LOGO-COLOR);
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
+}
+.yacht-details {
+  background: transparent;
+}
+.yacht-details ul{
+  background: transparent;
+}
+.yacht-details li{
+  background: transparent;
+}
+.yacht-details h2{
+  background: transparent;
 }
 
 .yacht-image:hover img {
@@ -903,7 +895,6 @@ ul li {
 }
 
 button {
- /*  background-color: var(--LOGO-COLOR); */
   background: linear-gradient(to right, #9E7D5A, #B89769, #D9C2A1);
   border: none;
   margin-top: 10px;
@@ -1058,8 +1049,6 @@ button:hover {
 }
 
 
-/* Mobile responsiveness */
-
 @media only screen and (max-width: 1024px) {
   .yachtWrapper {
     flex-basis: calc(100% - 20px);
@@ -1135,8 +1124,6 @@ button:hover {
 
 
 /* YACHT CHARTER MAIN PAGE*/
-
-/* Yacht Grid */
 .yacht-grid {
   display: flex;
   flex-wrap: wrap;
@@ -1145,7 +1132,7 @@ button:hover {
   padding: 10px; 
 }
 
-/* Styles for individual yacht cards */
+
 .yacht-card {
   width: calc(33.3333% - 20px); 
   display: flex;
@@ -1154,14 +1141,14 @@ button:hover {
   transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
-/* Ensuring images within yacht cards scale properly */
+
 .yacht-card img {
   width: 100%; 
   height: auto; 
   object-fit: cover; 
 }
 
-/* Tablet responsive styles */
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .yacht-card {
     width: calc(50% - 15px); 
@@ -1352,13 +1339,13 @@ button:hover {
 }
 
 .carousel-title {
-  font-size: 28px; /* Larger font size */
-  text-align: center; /* Center align the title */
-  color: var(--LOGO-COLOR); /* Dark text color */
+  font-size: 28px; 
+  text-align: center; 
+  color: var(--LOGO-COLOR); 
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1); 
-  margin-bottom: 20px; /* Spacing between the title and carousel */
-  font-family: 'Helvetica Neue', sans-serif; /* Example font */
-  padding: 10px 0; /* Padding above and below the title */
+  margin-bottom: 20px; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  padding: 10px 0; 
  
 }
 
@@ -1563,7 +1550,7 @@ button:hover {
   text-align: center; 
 }
 
-/* CSS for the loading border effect */
+
 #price h2 {
   position: relative;
   display: inline-block;
@@ -1724,7 +1711,7 @@ button:hover {
   opacity: 1; 
 }
 
-/* New CSS for left and right borders */
+
 .yacht-specs h2.active {
   box-shadow: -2px 0 0 var(--LOGO-COLOR), 2px 0 0 var(--LOGO-COLOR);
 }
@@ -1770,15 +1757,13 @@ button:hover {
 }
 #key-info .detailed-specs {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* Two equally sized columns */
-  grid-auto-rows: minmax(30px, auto); /* Control the row height */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(30px, auto); 
   gap: 0px 40px; 
   margin-bottom: 50px;
 }
 
 
-
-/* Existing CSS for .detailed-specs li */
 .detailed-specs li {
   font-size: 18px;
   padding: 10px;
@@ -1834,9 +1819,9 @@ button:hover {
 @media only screen and (max-width: 414px) {
   #key-info .detailed-specs {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equally sized columns */
-    grid-auto-rows: minmax(10px, auto); /* Sets a minimum and maximum row height */
-    gap: 10px; /* Gap between grid items */
+    grid-template-columns: 1fr 1fr; 
+    grid-auto-rows: minmax(10px, auto); 
+    gap: 10px; 
   }
 }
 
@@ -1856,12 +1841,12 @@ button:hover {
 
 
 #extras-section h2 {
-  text-align: center;  /* Center-align the text */
+  text-align: center;  
   color: var(--TEXT-LIGHTCOLOR);
   font-size: 36px;
   margin-top: 200px;
-  margin-left: auto;  /* Center the block */
-  margin-right: auto;  /* Center the block */
+  margin-left: auto; 
+  margin-right: auto; 
   position: relative;
   display: inline-block;
   padding: 10px;
@@ -1926,7 +1911,7 @@ button:hover {
 }
 
 
-/* Making sure the child elements inherit the background */
+
 #extras-section #extras-list, #extras-section #extras-list li {
   background-color: inherit;
 }
@@ -1943,10 +1928,12 @@ button:hover {
     margin: 0 10px 0 0;  
     padding: 10px;
     list-style: none;
+    margin-bottom: 30px;
   }
 
   #extras-section h2 {
-    margin-top: 50px;
+    margin-top: 80px;
+    margin-bottom: 80px;
   }
 }
 
@@ -2016,7 +2003,7 @@ button:hover {
               0px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* Mobile version */
+
 @media only screen and (max-width: 768px) {
   #text-image-container {
     flex-direction: column;
@@ -2149,40 +2136,6 @@ button:hover {
 }
 
 
-
-/* Modal Styles */
-/* .modal {
-  display: none;
-  position: fixed;
-  z-index: 10000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-.modal-content {
-  position: fixed;
-  background-color: #fff;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  border-radius: 12px;
-}
-.close {
-  cursor: pointer;
-  transform: translateY(-20px);
-}
-
-.modal-content h2{
-color: var(--TEXT-LIGHTCOLOR);
-padding: 10px;
-}
-.modal-content span {
-  background-color: transparent;
-  color: #000000;
-}
- */
 .active-link {
   color: #AA8759; 
 }
@@ -2206,7 +2159,6 @@ padding: 10px;
   transform: translateY(-50%);
 }
 
-/* START JAVA SLIDE TO PAGE CENTER */
 .navigation-row {
   display: flex;
   align-items: center;
@@ -2217,7 +2169,6 @@ padding: 10px;
   justify-content: center;  
 }
 
-/* CSS */
 
 .yacht-name {
   position: absolute;
@@ -2363,9 +2314,8 @@ form button {
   left: 0;
   width: 100%;
   height: 100%;
-
   z-index: 999;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
 }
 
 .popup-content {
@@ -2373,54 +2323,92 @@ form button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
+  width: 80%; /* Responsive width */
+  max-width: 400px; /* Maximum width */
   padding: 20px;
-  background-color: #fff;
   border-radius: 8px;
+  background-color: #0B3355; /* Navy blue background */
+  color: white; /* White text */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Adding depth with shadow */
 }
 
-.flex-container {
-  display: flex;
-  align-items: center;
-  gap: 5px; 
-  background-color: transparent;
+.popup-content h2 {
+  text-align: center; /* Centered title */
+  margin-bottom: 20px; /* Space below the title */
 }
-
-
-
 
 .close-popup {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
-  color: #000;
-  background-color: transparent;
+  color: white; /* White close button */
+  font-size: 24px; /* Larger close icon */
 }
 
-.popup-content h2 {
-  background-color: transparent;
+/* Style for form elements */
+.popup-content label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
 }
 
-/* MOBILE AND TABLET FIENDLY STYLES */
+.popup-content input[type="text"],
+.popup-content input[type="number"],
+.popup-content input[type="email"],
+.popup-content input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  font-size: 14px;
+}
+
+/* Style for the submit button */
+.popup-content button {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  padding-left: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+  background-color: #f2f2f2; /* Light grey on hover */
+}
+
+/* Additional styles for improved aesthetics */
+.popup-content input:focus {
+  border-color: #f2f2f2; 
+  outline: none;
+}
+
+
+
  @media screen and (max-width: 1024px) {
   .yacht {
-    flex-basis: 100%;  /* Full width on mobile */
-    margin: 10px 0;  /* Adjust as needed */
+    flex-basis: 100%;  
+    margin: 10px 0;  
   }
   .yacht-listings {
-    padding: 0 10px;  /* Less space to the left and right on mobile */
-  }
-
-  button {
-    color: #333;
+    padding: 0 10px; 
   }
 } 
 
 
 
-/* ABOUT US AND CONTACT US ALONG WITH INTRODUCTION */
 
+
+
+/* ABOUT US AND CONTACT US ALONG WITH INTRODUCTION */
 .gradient-overlay {
   position: absolute;
   bottom: 0;
@@ -2460,8 +2448,6 @@ form button {
   overflow: hidden;
 }
 
-
-
 .animate {
   opacity: 0;
   transform: translateX(-100px);
@@ -2499,7 +2485,7 @@ margin-top: 10px;
   margin-top: 20px;
 }
 
-
+/* PLAN YOUR VOYAGE FORM */
 .voyageFormPopup {
   width: 90%;
   max-width: 600px;
@@ -2525,8 +2511,8 @@ margin-top: 10px;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
-  color: black; 
-  background-color: white; 
+  color: var(--TEXT-LIGHTCOLOR); 
+ 
 }
 
 .voyage-form button {
@@ -2546,9 +2532,50 @@ margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.voyage-form button:hover {
-  background-color: #0056b3;
+.privacy-policy-check {
+  display: grid;
+  grid-template-columns: auto auto; 
+  align-items: center; 
+  gap: 10px; 
 }
+
+.checkbox-label {
+  grid-column: 1; 
+  grid-row: 1; 
+}
+
+#agreeVoyage {
+  grid-column: 1; 
+  grid-row: 1; 
+}
+
+.privacy-policy-link {
+  grid-column: 2;
+  grid-row: 1; 
+}
+
+@media screen and (max-width: 600px) {
+  .privacy-policy-check {
+      grid-template-columns: 1fr; 
+      grid-template-areas:
+          "checkbox"
+          "link";
+  }
+
+  #agreeVoyage {
+      grid-area: checkbox;
+  }
+
+  .checkbox-label {
+      grid-area: checkbox;
+  }
+
+  .privacy-policy-link {
+      grid-area: link;
+      text-align: center; 
+  }
+}
+
 
 .close-button {
   position: absolute;
@@ -2558,6 +2585,20 @@ margin-top: 10px;
   cursor: pointer;
   color: white;
 }
+
+.privacy-policy-check input[type="checkbox"] {
+  margin-right: 10;
+}
+.privacy-policy-check input[type="checkbox"],
+.privacy-policy-check label {
+  
+  vertical-align: middle; 
+}
+.privacy-policy-check label {
+  margin: 0;
+  padding: 0;
+}
+
 
 
 @media screen and (max-width: 428px) {
@@ -2572,14 +2613,91 @@ margin-top: 10px;
 
   .voyage-form input, .voyage-form textarea, .voyage-form select {
     padding: 8px; 
+    color: #000;
   }
 
   .voyage-form button {
     padding: 10px; 
     width: 100%; 
   }
+  
+}
+.voyage-privacy-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  
+}
+.consent-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; 
+  background-color: transparent;
 }
 
+.policyAgreement {
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.consent-label {
+  font-size: 16px;
+  color: #333; 
+  line-height: 1.4; 
+  max-width: 90%; 
+}
+.consent-label a  {
+  background-color: transparent;
+}
+
+.consent-label {
+  font-size: 16px; 
+  color: var(--TEXT-LIGHTCOLOR); 
+}
+
+@media (max-width: 600px) {
+  .consent-checkbox {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  #policyAgreement {
+      margin-bottom: 10px; 
+  }
+
+  .consent-label {
+      font-size: 14px; 
+      max-width: 100%; 
+  }
+}
+
+.policy-link {
+  color: var(--LOGO-COLOR); 
+  text-decoration: none; 
+}
+
+.policy-link:hover {
+  text-decoration: underline; 
+}
+
+
+
+.voyage-privacy-link {
+  color: var(--LOGO-COLOR);
+  text-decoration: none;
+}
+
+.voyage-privacy-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 600px) {
+  .voyage-privacy-check {
+      flex-direction: column;
+  }
+}
 
 
 .outline-button {
@@ -2615,15 +2733,14 @@ margin-top: 10px;
   right: 0;
   height: 25%; 
   background: linear-gradient(to bottom, rgba(11, 51, 85, 0), rgba(11, 51, 85, 0.9));
-
-  z-index: 1; /* Make sure it's above the video */
+  z-index: 1; 
 }
 
 .outline-button:hover::before {
   transform: scale(1);
 }
 
-@media (max-width: 768px) { /* Tablets */
+@media (max-width: 768px) { 
   .container {
       flex-direction: column;
   }
@@ -2633,15 +2750,62 @@ margin-top: 10px;
   }
 }
 
-@media (max-width: 480px) { /* Mobile phones */
+@media (max-width: 480px) { 
   .container {
       width: 90%;
   }
 }
 
 
+/* DATA POLICY
+ */
+ .privacy-policy-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #0B3355; /* Dark navy blue background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #ffffff; /* White text */
+  font-family: 'Arial', sans-serif;
+}
 
+.privacy-policy-section h2 {
+  color: #ffffff; /* White for main headings */
+  font-size: 2em;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
 
+.privacy-policy-section h3 {
+  color: #EFEFEF;
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.privacy-policy-section p {
+  font-size: 1em;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .privacy-policy-section {
+      padding: 20px;
+      max-width: 90%;
+  }
+
+  .privacy-policy-section h2 {
+      font-size: 1.8em;
+  }
+
+  .privacy-policy-section h3 {
+      font-size: 1.4em;
+  }
+}
 
 
 
@@ -2703,11 +2867,10 @@ margin-top: 10px;
 .image-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around; /* Adjusts image positioning */
+  gap: 10px; /* Adds space between images */
   padding: 0 10px;
-  overflow: hidden;
-  height: calc(100vh - 200px); 
-}
+
 
 .image-block {
   width: calc(33.333% - 10px);
@@ -2726,7 +2889,7 @@ margin-top: 10px;
 .destination-image {
   width: 100%;
   height: auto;
-  object-fit: cover; /* This will help images adapt */
+  object-fit: cover; 
   transition: transform 0.5s;
 }
 
@@ -2762,8 +2925,6 @@ margin-top: 10px;
 }
 
 
-
-/* For tablet devices */
 @media (max-width: 1024px) {
   .image-block {
     width: 100%;
@@ -2784,7 +2945,6 @@ margin-top: 10px;
   }
 }
 
-/* For mobile devices */
 @media (max-width: 600px) {
   .image-block {
     width: 100%;
@@ -2834,7 +2994,7 @@ margin-top: 10px;
   align-items: center;
   justify-content: center;
   z-index: 1;
-  background: linear-gradient(to bottom, #0B3355, #1A4B75);
+  background: linear-gradient(to top, #0B3355, #1A4B75);
 }
 
 
@@ -2959,154 +3119,18 @@ margin-top: 10px;
 
 
 
-/* NEWSLETTER EMAIL*/ 
-
-/* .newsletter-subscribe h2{
-  margin-top: 20px;
-  text-align: center;
-  color: #fff;
-  background-color: transparent;
-}
-
-.newsletter-subscribe label {
-  color: #fff;
-}
-
-.newsletter-subscribe button {
-  color: #000; 
-  
-}
-.newsletter-subscribe form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 500px; 
-  margin: 0 auto; 
-  padding: 20px; 
-  background-color: transparent;
-}
-
-.newsletter-subscribe input[type="email"] {
-  border: none;
-  border-bottom: 1px solid #fff;
-  padding: 10px;
-  font-size: 1em;
-  width: 100%;
-  box-sizing: border-box;
-  transition: border 0.3s;
-  background: var(--BG-COLOUR);
-  color: #fff;
-}
-
-.newsletter-subscribe input[type="email"]:focus {
-  border-bottom: 2px solid var(--LOGO-COLOR);
-  outline: none;
-}
-
-.newsletter-subscribe input[type="email"] {
-  margin-bottom: 20px;
-}
-
-
-.newsletter-subscribe .options {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.newsletter-subscribe .option {
-  position: relative;
-}
-
-.newsletter-subscribe input[type="checkbox"] {
-  visibility: hidden;
-}
-
-.newsletter-subscribe input[type="checkbox"] + label:before {
-  content: '';
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  margin-right: 5px;
-  vertical-align: middle;
-  
-}
-
-.newsletter-subscribe input[type="checkbox"]:checked + label:before {
-  background: #fff;
-}
-
-@media (max-width: 500px) {
-  .newsletter-subscribe .options {
-    flex-direction: column;
-  }
-
-  @media (max-width: 500px) {
-    .newsletter-subscribe .options {
-      flex-direction: column;
-      align-items: center; 
-    }
-  
-    .newsletter-subscribe .option label {
-      display: flex;
-      align-items: center;
-      justify-content: center; 
-    }
-  
-    .newsletter-subscribe input[type="checkbox"] + label:before {
-      margin-top: -2px; 
-      vertical-align: middle;
-    }
-  
-    .newsletter-subscribe form {
-      width: 90%;
-    }
-  
-    .newsletter-subscribe .options label {
-      margin-bottom: 10px;
-      text-align: center; 
-    }
-  }
-  
-  .newsletter-subscribe .option label {
-    display: flex;
-    align-items: center;
-  }
-}
-
-
-@media (max-width: 500px) {
-  .newsletter-subscribe form {
-    width: 90%;
-  }
-
-  .newsletter-subscribe .options {
-    flex-direction: row;
-  }
-
-  .newsletter-subscribe .options label {
-    margin-bottom: 10px;
-  }
-}
- */
-
 /* ABOUT US PAGE STYLING */
 .armada-section, .narrative-section, .purpose-section {
   text-align: center;
   padding: 40px 20px;
 }
 
-/* Heading styles */
 .armada-section h2, .narrative-section h2, .purpose-section h2 {
   font-size: 2em;
   margin-bottom: 20px;
   color: var(--TEXT-LIGHTCOLOR);
 }
 
-/* Paragraph styles */
 .armada-section p, .narrative-section p, .purpose-section p {
   color: var(--TEXT-LIGHTCOLOR);
 }
@@ -3117,20 +3141,20 @@ margin-top: 10px;
   background-color: transparent;
 }
 
-/* Gallery container */
+
 .gallery-container {
   position: relative;
   width: 100%;
   overflow: hidden; 
 }
 
-/* Gallery slider */
+
 .gallery-slider {
   display: flex;
   transition: transform 0.5s ease;
 }
 
-/* Gallery items */
+
 .gallery-item {
   flex: 0 0 100%; 
   text-align: center;
@@ -3138,7 +3162,7 @@ margin-top: 10px;
  
 }
 
-/* Gallery images */
+
 .gallery-item img {
   max-width: 100%; 
   height: auto; 
@@ -3150,7 +3174,6 @@ margin-top: 10px;
   padding: 40px;
   max-width: 1000px; 
   margin: auto; 
-  overflow: hidden; 
 }
 
 .gallery-item img, .gallery-item h3 {
@@ -3161,7 +3184,7 @@ margin-top: 10px;
 .narrative-section h2 {
   font-size: 2.5em; 
   margin-bottom: 30px; 
-margin-top: 50px;
+  margin-top: 150px;
 }
 
 .narrative-section p {
@@ -3184,14 +3207,14 @@ margin-top: 50px;
   margin-top: 40px;
 }
 
-/* Initial state of h2 elements */
+
 .animated-h2 {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* State when h2 elements are animated */
+
 .animated-h2.animate {
   opacity: 1;
   transform: translateY(0);
@@ -3203,37 +3226,40 @@ margin-top: 50px;
   margin-bottom: 20px;
 }
 
-/* Create a pseudo-element for the underline */
+
 .animated-h2::after {
   content: '';
   position: absolute;
-  bottom: -5px; /* Adjust as needed */
+  bottom: -5px; 
   left: 0;
-  width: 0; /* Initially no underline */
-  height: 2px; /* Thickness of the underline */
-  background: var(--LOGO-COLOR); /* Color of the underline */
+  width: 0;
+  height: 2px; 
+  background: var(--LOGO-COLOR); 
   transition: width 0.5s ease;
 }
 
-/* State when h2 elements are animated */
+
 .animated-h2.animate::after {
-  width: 100%; /* Full underline */
+  width: 100%; 
 }
 
 
 @media (max-width: 768px) {
   .narrative-section {
-      padding: 20px;
+    padding: 20px;
   }
 
   .narrative-section h2 {
-      font-size: 2em;
+    font-size: 2em; 
   }
 
   .narrative-section p {
-      font-size: 1.1em;
-      
-      text-align: justify;
+    font-size: 1.1em; 
+    line-height: 1.6; 
+    margin: 0 15px;
+    padding: 10px 0; 
+    opacity: 1; 
+    transform: translateY(0);
   }
 }
 
@@ -3260,13 +3286,12 @@ button.next {
   right: 210px;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 640px) {
   .gallery-item img {
-      max-height: none; /* On smaller screens, allow images to take their natural height */
+      max-height: none; 
   }
 
-  /* Adjust font sizes for smaller screens if necessary */
   .armada-section h2, .narrative-section h2, .purpose-section h2 {
       font-size: 1.5em;
   }
@@ -3283,19 +3308,11 @@ button.next {
   }
 }
 
-/* Additional global or specific styling as needed */
-
-
-
-
-
-
 /* CONTACT US AND LOGO */
 .wrapper {
   display: flex;
   height: 70vh;
   justify-content: space-between;
- /*  padding: 20px; */
   flex-direction: column;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/IbizaPortPanorama.jpg');
   background-repeat: no-repeat;
@@ -3305,7 +3322,6 @@ button.next {
   color: #fff;
   font-size: 20px;
 }
-
 
 
 .half {
@@ -3361,7 +3377,6 @@ button.next {
 @media screen and (max-width: 600px) {
   .wrapper {
     background-attachment: scroll;
-    /* background-attachment: fixed; */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/IbizaPortPanoramaIphone.jpg');
     background-size: cover; 
     background-position: center center; 
@@ -3531,6 +3546,8 @@ font-size: 16px;
   background-color: transparent;
 }
 
+
+
 .contact-message{
   background-color: transparent;
 }
@@ -3580,7 +3597,6 @@ font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;  
-  color: #000;
 }
 
 .contact-form-element button:hover {
@@ -3603,12 +3619,6 @@ font-size: 16px;
 }
 
 
-/* .checkbox-container label {
-  margin: 0; 
-  color: #fff;
-  display: flex; 
-  align-items: center; 
-} */
 
 .checkbox-container label.privacy {
   color: #fff;
@@ -3648,7 +3658,7 @@ font-size: 16px;
 @media (max-width: 768px) {
   .contact-form-container .checkbox-container {
     display: flex; 
-    flex-direction: row; /* Keeps checkbox and label in the same row */
+    flex-direction: row;
     gap: 10px;
   }
 
@@ -3660,7 +3670,6 @@ font-size: 16px;
 
 
 /* ABOUT US PAGE STYLE  */
-
 .header-content p {
   font-size: 1.1rem;
   margin-bottom: 20px;
@@ -3728,7 +3737,7 @@ font-size: 36px;
 }
 .cta-button {
   display: inline-block;
-  background-color: var(--LOGO-COLOR); /* Example button color */
+  background-color: var(--LOGO-COLOR); 
   color: white;
   padding: 10px 20px;
   text-align: center;
@@ -3757,8 +3766,6 @@ section {
 }
 
 
-
-
 .cta-section {
   background-image: url('img/Formentera\ aerial.jpg'); 
   background-size: cover; 
@@ -3769,7 +3776,7 @@ section {
   margin: 0;
 }
 
-/* Optional: Add a dark overlay for better text visibility */
+
 .cta-section:before {
   content: '';
   position: absolute;
@@ -3781,7 +3788,7 @@ section {
   z-index: 1;
 }
 
-/* Style the content to be on top of the overlay */
+
 .cta-section * {
   position: relative;
   z-index: 2;
@@ -3848,8 +3855,6 @@ section {
 .next {
   right: 10px; 
 }
-
-
 
 
 .team-gallery div, .testimonials-gallery div {
@@ -3952,11 +3957,6 @@ section {
   background-color: transparent;
 }
 
-/* .smaller-video {
-  max-height: 70vh;  
-  width: auto;
-} */
-
 .carousel button {
  font-weight: lighter;
 }
@@ -4046,32 +4046,32 @@ section {
 }
 
 .carousel-slide h2 {
-  font-size: 36px; /* Desktop size */
+  font-size: 36px; 
 }
 
 .carousel-slide button {
-  font-size: 20px; /* Desktop size */
-  margin-top: 15px; /* Space between title and button */
+  font-size: 20px; 
+  margin-top: 15px; 
 }
 
-/* Tablet adjustments */
+
 @media (max-width: 768px) {
   .carousel-slide h2 {
-    font-size: 28px; /* Tablet size */
+    font-size: 28px; 
   }
   .carousel-slide button {
-    font-size: 18px; /* Tablet size */
+    font-size: 18px; 
   }
 }
 
-/* Mobile adjustments (particularly for iPhone) */
+
 @media (max-width: 480px) {
   .carousel-slide h2 {
-    font-size: 24px; /* Mobile size */
-    margin-bottom: 10px; /* Adjust spacing between h2 and button */
+    font-size: 24px; 
+    margin-bottom: 10px; 
   }
   .carousel-slide button {
-    font-size: 10px; /* Mobile size */
+    font-size: 10px; 
     margin-bottom: 150px;
   }
   .carousel-controls .control-btn[data-dir="prev"],
@@ -4091,7 +4091,6 @@ section {
 
 
 /* TEXT AND TITLE UNDEARNEATH SLIDE PICTURE PRESENTING DESTINATIONS */
-
 .yachtContainer {
   width: 100%;              
   padding: 20px;             
@@ -4185,7 +4184,6 @@ section {
 }
 
 .beach {
- /*  width: 150px; */
   text-align: center;
   opacity: 0;
   transform: translateX(100%);
@@ -4215,7 +4213,6 @@ section {
 
 .details-container {
   display: none;
-  /* width: 60vw; */
   overflow: hidden;
 }
 
@@ -4356,154 +4353,6 @@ section {
 }
 
 
-
-
-
-
-
-/* ON SIDE PAGE POPUP UP ENQUIRE BUTTON  */
-/* .contact-us-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 15px 30px;
-  background-color: var(--LOGO-COLOR);
-  color: #ffffff;
-  cursor: pointer;
-  border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  font-family: 'Georgia', serif;
-}
-
-.slide-in-panel {
-  position: fixed;
-  top: 0;
-  right: -450px;
-  width: 450px;
-  height: 100%;
-  background-color: #ffffff;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: 'Georgia', serif;
-  transition: right 0.3s;
-  z-index: 1000;
-}
-
-.contact-us-button .fas {
-  background-color: transparent;
-}
-.slide-in-panel.active {
-  right: 0;
-}
-
-.slide-in-panel h2 {
-  color: #555;
-  font-size: 30px;
-  margin-bottom: 15px;
-  background-color: transparent;
-}
-.slide-in-panel p{
-  background-color: transparent;
-}
-
-.slide-in-panel input, .slide-in-panel textarea {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 15px;
-  border: 2px solid #1d72b8;
-  border-radius: 5px;
-}
-
-.slide-in-panel button[type="submit"] {
-  padding: 15px 30px;
-  background-color: #1d72b8;
-  color: #ffffff;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.slide-in-panel button[type="submit"]:hover {
-  background-color: #155a8a;
-}
-
-.slide-in-panel #closeButton {
-  margin-top: 20px;
-  background: none;
-  border: none;
-  color: #777;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-    
-  .contact-us-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 15px;
-    background-color: var(--LOGO-COLOR);
-    color: #ffffff;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
-    line-height: 30px;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    overflow: hidden;
-}
-
-
-  .slide-in-panel {
-      position: fixed;
-      bottom: 80px; 
-      right: 20px;
-      top: auto;
-      width: 300px; 
-      height: auto; 
-      background-color: #ffffff; 
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(100px);
-      transition: all 0.3s ease;
-  }
-
-  .slide-in-panel.active {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-  }
-  
-  .slide-in-panel h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-  }
-
-  .slide-in-panel input, .slide-in-panel textarea {
-      margin-bottom: 10px;
-      padding: 10px;
-  }
-
-  .slide-in-panel button[type="submit"] {
-      padding: 10px 20px;
-      font-size: 14px;
-  }
-
-} */
-
-
 /* POP UP LARGE IMAGE WHEN CLICKED  */
 .modal {
   display: none; 
@@ -4618,7 +4467,6 @@ section {
 }
 
 
-
 .center-wrapper {
   display: flex;
   justify-content: center;
@@ -4643,19 +4491,19 @@ section {
   text-justify: inter-word; 
 }
 
-/* MOBILE VIEW TEXT FORMENTERA */
+
 @media (max-width: 800px) {
   .content-box {
-    width: 100%; /* Takes the full width of the screen */
-    padding: 20px; /* Reduced padding */
+    width: 100%; 
+    padding: 20px; 
   }
 
   .content-box h1 {
-    font-size: 24px; /* Example of reduced font size for h1 */
+    font-size: 24px; 
   }
   
   .content-box p {
-    font-size: 16px; /* Example of reduced font size for p */
+    font-size: 16px; 
   }
 }
 
@@ -4680,45 +4528,42 @@ section {
 
 /* YACHT CHARTER PAGE */
 .yachtListContainer {
-  margin: 0 15%; /* Adding 15% margin to left and right */
+  margin: 0 15%; 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Distribute cards evenly */
+  justify-content: space-between; 
   margin-top: 200px;
 }
 
-/* Style each yacht as a card */
+
 .yachtCard {
-  flex-basis: calc(30% - 20px); /* Making each card take up about 30% of the row */
+  flex-basis: calc(30% - 20px); 
   margin: 10px;
 }
 
 
-
-/* For mobile screens */
 @media screen and (max-width: 768px) {
   .yachtCard {
     flex-basis: 100%;
   }
   .yachtListContainer {
-    margin: 0; /* Removing left and right margin on mobile */
+    margin: 0; 
   }
 }
 
 .yachtImage {
   width: 100%;
-  height: 300px;  /* Fixed height */
-  overflow: hidden;  /* Hide any part of the image that exceeds the container */
+  height: 300px;  
+  overflow: hidden;  
 }
 
-/* Style the image */
+
 .yachtImage img {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-/* Style the yacht details */
 .yachtDetail {
   padding: 20px;
 }
@@ -4728,7 +4573,6 @@ section {
 
 
 /* FOOTER STYLES */
-
 footer {
   flex-shrink: 0;
   bottom: 0;
@@ -4812,8 +4656,6 @@ h4 {
   margin-right: 20px;
 }
 
-
-
 .social-media a:hover {
   opacity: 0.7;
 }
@@ -4831,7 +4673,7 @@ h4 {
 @media (max-width: 768px) {
   .footer-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-columns: repeat(2, 1fr); 
     grid-gap: 15px;
     overflow: hidden;
   }
