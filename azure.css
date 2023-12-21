@@ -506,7 +506,7 @@ nav .mainMenu .closeMenu,
       font-size: 14px;
     }
   
-    /* ADJUSTING VIDEO FOR MOBILE SCREEN */
+    
     .video-container video {
       max-height: calc(100vh - 50px);
       height: auto;
