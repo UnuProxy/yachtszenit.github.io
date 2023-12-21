@@ -830,6 +830,7 @@ color: var(--LOGO-COLOR);
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 80px;
+  background: linear-gradient(to bottom, #0B3355, #1A4B75);
 }
 
 .yacht {
@@ -845,7 +846,7 @@ color: var(--LOGO-COLOR);
 .yacht-image {
   margin-bottom: 10px;
   height: 250px; 
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .yacht-image img {
@@ -853,6 +854,18 @@ color: var(--LOGO-COLOR);
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
+}
+.yacht-details {
+  background: transparent;
+}
+.yacht-details ul{
+  background: transparent;
+}
+.yacht-details li{
+  background: transparent;
+}
+.yacht-details h2{
+  background: transparent;
 }
 
 .yacht-image:hover img {
@@ -2301,9 +2314,8 @@ form button {
   left: 0;
   width: 100%;
   height: 100%;
-
   z-index: 999;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
 }
 
 .popup-content {
@@ -2311,34 +2323,74 @@ form button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
+  width: 80%; /* Responsive width */
+  max-width: 400px; /* Maximum width */
   padding: 20px;
-  background-color: #fff;
   border-radius: 8px;
+  background-color: #0B3355; /* Navy blue background */
+  color: white; /* White text */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Adding depth with shadow */
 }
 
-.flex-container {
-  display: flex;
-  align-items: center;
-  gap: 5px; 
-  background-color: transparent;
+.popup-content h2 {
+  text-align: center; /* Centered title */
+  margin-bottom: 20px; /* Space below the title */
 }
-
-
-
 
 .close-popup {
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
-  color: #000;
-  background-color: transparent;
+  color: white; /* White close button */
+  font-size: 24px; /* Larger close icon */
 }
 
-.popup-content h2 {
-  background-color: transparent;
+/* Style for form elements */
+.popup-content label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
 }
+
+.popup-content input[type="text"],
+.popup-content input[type="number"],
+.popup-content input[type="email"],
+.popup-content input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  font-size: 14px;
+}
+
+/* Style for the submit button */
+.popup-content button {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  padding-left: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+  background-color: #f2f2f2; /* Light grey on hover */
+}
+
+/* Additional styles for improved aesthetics */
+.popup-content input:focus {
+  border-color: #f2f2f2; 
+  outline: none;
+}
+
 
 
  @media screen and (max-width: 1024px) {
@@ -2349,11 +2401,10 @@ form button {
   .yacht-listings {
     padding: 0 10px; 
   }
-
-  button {
-    color: #333;
-  }
 } 
+
+
+
 
 
 
@@ -2434,7 +2485,7 @@ margin-top: 10px;
   margin-top: 20px;
 }
 
-/* PLAN YOUR VOYAGE FROM */
+/* PLAN YOUR VOYAGE FORM */
 .voyageFormPopup {
   width: 90%;
   max-width: 600px;
@@ -2460,8 +2511,8 @@ margin-top: 10px;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
-  color: black; 
-  background-color: white; 
+  color: var(--TEXT-LIGHTCOLOR); 
+ 
 }
 
 .voyage-form button {
@@ -2480,10 +2531,49 @@ margin-top: 10px;
 .voyageFormPopup-content h3 {
   margin-bottom: 10px;
 }
+
 .privacy-policy-check {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto; 
   align-items: center; 
-  gap: 8px; 
+  gap: 10px; 
+}
+
+.checkbox-label {
+  grid-column: 1; 
+  grid-row: 1; 
+}
+
+#agreeVoyage {
+  grid-column: 1; 
+  grid-row: 1; 
+}
+
+.privacy-policy-link {
+  grid-column: 2;
+  grid-row: 1; 
+}
+
+@media screen and (max-width: 600px) {
+  .privacy-policy-check {
+      grid-template-columns: 1fr; 
+      grid-template-areas:
+          "checkbox"
+          "link";
+  }
+
+  #agreeVoyage {
+      grid-area: checkbox;
+  }
+
+  .checkbox-label {
+      grid-area: checkbox;
+  }
+
+  .privacy-policy-link {
+      grid-area: link;
+      text-align: center; 
+  }
 }
 
 
@@ -2494,12 +2584,6 @@ margin-top: 10px;
   font-size: 20px;
   cursor: pointer;
   color: white;
-}
-
-.privacy-policy-check {
-  display: flex;
-  align-items: center; 
-  gap: 8px; 
 }
 
 .privacy-policy-check input[type="checkbox"] {
@@ -2538,19 +2622,81 @@ margin-top: 10px;
   }
   
 }
+.voyage-privacy-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  
+}
+.consent-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; 
+  background-color: transparent;
+}
 
-
-.privacy-policy-check input[type="checkbox"] {
-  display: inline-block;
-  vertical-align: middle;
+.policyAgreement {
+  flex-shrink: 0;
   margin-right: 10px;
 }
 
-.privacy-policy-check label {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0;
-  padding: 0;
+.consent-label {
+  font-size: 16px;
+  color: #333; 
+  line-height: 1.4; 
+  max-width: 90%; 
+}
+.consent-label a  {
+  background-color: transparent;
+}
+
+.consent-label {
+  font-size: 16px; 
+  color: var(--TEXT-LIGHTCOLOR); 
+}
+
+@media (max-width: 600px) {
+  .consent-checkbox {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  #policyAgreement {
+      margin-bottom: 10px; 
+  }
+
+  .consent-label {
+      font-size: 14px; 
+      max-width: 100%; 
+  }
+}
+
+.policy-link {
+  color: var(--LOGO-COLOR); 
+  text-decoration: none; 
+}
+
+.policy-link:hover {
+  text-decoration: underline; 
+}
+
+
+
+.voyage-privacy-link {
+  color: var(--LOGO-COLOR);
+  text-decoration: none;
+}
+
+.voyage-privacy-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 600px) {
+  .voyage-privacy-check {
+      flex-direction: column;
+  }
 }
 
 
@@ -2611,6 +2757,58 @@ margin-top: 10px;
 }
 
 
+/* DATA POLICY
+ */
+ .privacy-policy-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #0B3355; /* Dark navy blue background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #ffffff; /* White text */
+  font-family: 'Arial', sans-serif;
+}
+
+.privacy-policy-section h2 {
+  color: #ffffff; /* White for main headings */
+  font-size: 2em;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.privacy-policy-section h3 {
+  color: #EFEFEF;
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.privacy-policy-section p {
+  font-size: 1em;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .privacy-policy-section {
+      padding: 20px;
+      max-width: 90%;
+  }
+
+  .privacy-policy-section h2 {
+      font-size: 1.8em;
+  }
+
+  .privacy-policy-section h3 {
+      font-size: 1.4em;
+  }
+}
+
+
+
 /* IBIZA POPULAR DESTINATION*/
 .destination-container {
   overflow: hidden;
@@ -2669,11 +2867,10 @@ margin-top: 10px;
 .image-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around; /* Adjusts image positioning */
+  gap: 10px; /* Adds space between images */
   padding: 0 10px;
-  overflow: hidden;
-  height: calc(100vh - 200px); 
-}
+
 
 .image-block {
   width: calc(33.333% - 10px);
@@ -2797,7 +2994,7 @@ margin-top: 10px;
   align-items: center;
   justify-content: center;
   z-index: 1;
-  background: linear-gradient(to bottom, #0B3355, #1A4B75);
+  background: linear-gradient(to top, #0B3355, #1A4B75);
 }
 
 
@@ -3125,7 +3322,6 @@ button.next {
   color: #fff;
   font-size: 20px;
 }
-
 
 
 .half {
