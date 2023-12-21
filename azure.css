@@ -830,6 +830,7 @@ color: var(--LOGO-COLOR);
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 80px;
+  background: linear-gradient(to bottom, #0B3355, #1A4B75);
 }
 
 .yacht {
@@ -845,7 +846,7 @@ color: var(--LOGO-COLOR);
 .yacht-image {
   margin-bottom: 10px;
   height: 250px; 
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .yacht-image img {
@@ -853,6 +854,18 @@ color: var(--LOGO-COLOR);
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
+}
+.yacht-details {
+  background: transparent;
+}
+.yacht-details ul{
+  background: transparent;
+}
+.yacht-details li{
+  background: transparent;
+}
+.yacht-details h2{
+  background: transparent;
 }
 
 .yacht-image:hover img {
@@ -2337,8 +2350,7 @@ form button {
   width: 100%;
   height: 100%;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  color: white;
+
 }
 
 .popup-content {
@@ -2346,34 +2358,10 @@ form button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
+  width: 80%; /* Responsive width */
+  max-width: 400px; /* Maximum width */
   padding: 20px;
-  background-color: var(--BG-COLOUR); /* Dark blue background */
-  border-radius: 8px;
-  color: white; /* Ensuring text color is white */
-}
 
-/* Style for the form input fields and textarea */
-.popup-content input[type="text"],
-.popup-content input[type="email"],
-.popup-content input[type="number"],
-.popup-content input[type="date"],
-.popup-content textarea {
-  display: block; /* Make them block elements */
-  width: 100%; /* Full width */
-  padding: 10px; /* Padding */
-  margin-bottom: 10px; /* Space between elements */
-  background-color: #0B3355; /* Dark blue background */
-  color: white; /* White text */
-  border: 1px solid white; /* White border */
-  box-sizing: border-box;
-}
-
-/* Separate style for labels */
-.popup-content label {
-  color: white; /* White text */
-  margin-bottom: 5px; /* Spacing below the label */
-  display: block; /* Ensure labels are block level */
 }
 
 .close-popup {
@@ -2381,21 +2369,9 @@ form button {
   top: 10px;
   right: 10px;
   cursor: pointer;
-  color: white;
-  background-color: transparent;
-}
 
-/* Center-align the title */
-.popup-content h2 {
-  text-align: center;
-  margin-bottom: 20px; /* Space below the title */
-}
 
-@media screen and (max-width: 1024px) {
-  .popup-content {
-      width: 90%; /* Adjust width on smaller screens */
-  }
-}
+
 
 
 
@@ -2503,8 +2479,8 @@ margin-top: 10px;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
-  color: black; 
-  background-color: white; 
+  color: var(--TEXT-LIGHTCOLOR); 
+ 
 }
 
 .voyage-form button {
@@ -2646,7 +2622,15 @@ margin-top: 10px;
 }
 
 .policyAgreement {
+  flex-shrink: 0;
   margin-right: 10px;
+}
+
+.consent-label {
+  font-size: 16px;
+  color: #333; 
+  line-height: 1.4; 
+  max-width: 90%; 
 }
 .consent-label a  {
   background-color: transparent;
@@ -2655,6 +2639,22 @@ margin-top: 10px;
 .consent-label {
   font-size: 16px; 
   color: var(--TEXT-LIGHTCOLOR); 
+}
+
+@media (max-width: 600px) {
+  .consent-checkbox {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  #policyAgreement {
+      margin-bottom: 10px; 
+  }
+
+  .consent-label {
+      font-size: 14px; 
+      max-width: 100%; 
+  }
 }
 
 .policy-link {
@@ -2902,10 +2902,9 @@ margin-top: 10px;
 .image-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around; /* Adjusts image positioning */
+  gap: 10px; /* Adds space between images */
   padding: 0 10px;
-  overflow: hidden;
-}
 
 .image-block {
   width: calc(33.333% - 10px);
@@ -3029,7 +3028,7 @@ margin-top: 10px;
   align-items: center;
   justify-content: center;
   z-index: 1;
-  background: linear-gradient(to bottom, #0B3355, #1A4B75);
+  background: linear-gradient(to top, #0B3355, #1A4B75);
 }
 
 
@@ -3357,7 +3356,6 @@ button.next {
   color: #fff;
   font-size: 20px;
 }
-
 
 
 .half {
