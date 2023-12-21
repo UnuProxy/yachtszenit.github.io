@@ -2870,7 +2870,8 @@ margin-top: 10px;
   justify-content: space-around; /* Adjusts image positioning */
   gap: 10px; /* Adds space between images */
   padding: 0 10px;
-
+  height: auto; 
+}
 
 .image-block {
   width: calc(33.333% - 10px);
