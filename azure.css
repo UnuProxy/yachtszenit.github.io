@@ -1161,20 +1161,20 @@ button:hover {
 }
 
 
-/* Hover effect */
+
 .yacht-card:hover {
   transform: translateY(-8px);  
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); 
 }
 
-/* Yacht Image */
+
 .yacht-card img {
   max-width: 100%;
   height: auto;
   flex-grow: 1;
 }
 
-/* Yacht Card */
+
 .yacht-card {
   position: relative;
 }
@@ -1191,14 +1191,14 @@ button:hover {
   z-index: 1;
 }
 
-/* Yacht Image */
+
 .yacht-card img {
   position: relative;
   z-index: 0;
 }
 
 
-/* Yacht Info */
+
 .yacht-info {
   position: relative;  
   z-index: 3;  
@@ -1832,7 +1832,6 @@ button:hover {
 
 
 /* BULLET POINTS IN EXTRAS */
-
 #extras-section {
   text-align: center; 
   margin-bottom: 200px;
